@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: chemaxonlib:poi:3.11-beta2-20140914">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/chemaxonlib/poi/3.11-beta2-20140914/poi-3.11-beta2-20140914.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/chemaxonlib/poi/3.11-beta2-20140914/poi-3.11-beta2-20140914-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/chemaxonlib/poi/3.11-beta2-20140914/poi-3.11-beta2-20140914-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <servlet>
+        <servlet-name>CTS Web Services</servlet-name>
+        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+
+        <init-param>
+            <param-name>jersey.config.server.provider.packages</param-name>
+            <param-value>ctsws</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CTS Web Services</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>15</session-timeout>
+    </session-config>
+    <context-param>
+        <param-name>abiotic_reduction</param-name>
+        <param-value>Reactions\AbioticReduction_v1.4.mrv</param-value>
+    </context-param>
+    <context-param>
+        <param-name>human_biotransformation</param-name>
+        <param-value>Reactions\chemaxon_biotransformation_library_demo.mrv</param-value>
+    </context-param>
+    <context-param>
+        <param-name>hydrolysis</param-name>
+        <param-value>Reactions\Hydrolysis_v1.7.mrv</param-value>
+    </context-param>
+    <context-param>
+        <param-name>combined_abioticreduction_hydrolysis</param-name>
+        <param-value>Reactions\Combo_AbiHyd1.7_AbiRed1.4.mrv</param-value>
+    </context-param>
+    <context-param>
+        <param-name>chemimages</param-name>
+        <param-value>chemimages</param-value>
+    </context-param>
+</web-app>

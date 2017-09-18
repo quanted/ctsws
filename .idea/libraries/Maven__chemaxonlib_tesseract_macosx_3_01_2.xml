@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: chemaxonlib:tesseract-macosx:3.01_2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/chemaxonlib/tesseract-macosx/3.01_2/tesseract-macosx-3.01_2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/chemaxonlib/tesseract-macosx/3.01_2/tesseract-macosx-3.01_2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/chemaxonlib/tesseract-macosx/3.01_2/tesseract-macosx-3.01_2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

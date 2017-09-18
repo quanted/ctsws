@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: chemaxonlib:poi-ooxml:3.11-beta2-20140914-56023">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/chemaxonlib/poi-ooxml/3.11-beta2-20140914-56023/poi-ooxml-3.11-beta2-20140914-56023.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/chemaxonlib/poi-ooxml/3.11-beta2-20140914-56023/poi-ooxml-3.11-beta2-20140914-56023-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/chemaxonlib/poi-ooxml/3.11-beta2-20140914-56023/poi-ooxml-3.11-beta2-20140914-56023-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
