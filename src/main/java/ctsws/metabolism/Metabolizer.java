@@ -117,6 +117,7 @@ public class Metabolizer {
 		    if (transformationLibs != null)
 		    	mtblzer.setReactions(reactionList);
 
+		    mtblzer.setExhaustive(false);
 		    mtblzer.setLikelyLimit(likelyLimit);
 		    mtblzer.setPopulationLimit(popLimit);
 		    mtblzer.setGenerationLimit(genLimit);
@@ -127,8 +128,10 @@ public class Metabolizer {
       
       
 		    JSONObject joMetabs = new JSONObject();
-		    JSONObject joParent = new JSONObject();      
-		    recurseMetaboliteTree(lstMetabolites.get(0), joMetabs);
+		    JSONObject joParent = new JSONObject();
+
+			HashMap<String, Metabolite> hashMap = new HashMap<String, Metabolite>();
+		    recurseMetaboliteTree(lstMetabolites.get(0), joMetabs, hashMap);
 
 		    joParent.put("metabolites", joMetabs);
 		    JSONObject joMetTree = new JSONObject();
@@ -163,16 +166,16 @@ public class Metabolizer {
 	  List<Metabolite> lstMetabolitesTmp = metabolizer.enumerate();
 	  List<Metabolite> lstMetabolitesNoExtinct = new ArrayList<Metabolite>();
 
-	  for (int i=0;i<lstMetabolitesTmp.size();i++)
-	  {
-	  	Metabolite metabolite = lstMetabolitesTmp.get(i);
-	  	if (metabolite.getState() != Metabolite.State.EXTINCT)
-			lstMetabolitesNoExtinct.add(metabolite);
-	  }
+//	  for (int i=0;i<lstMetabolitesTmp.size();i++)
+//	  {
+//	  	Metabolite metabolite = lstMetabolitesTmp.get(i);
+//	  	if (metabolite.getState() != Metabolite.State.EXTINCT)
+//			lstMetabolitesNoExtinct.add(metabolite);
+//	  }
 
 	  // get a list of unique metabolites sorted by global accumulation (major metabolite indicator)
-	  //lstMetabolites = metabolizer.calculateGlobals(lstMetabolitesTmp);
-	  lstMetabolites = metabolizer.calculateGlobals(lstMetabolitesNoExtinct);
+	  lstMetabolites = metabolizer.calculateGlobals(lstMetabolitesTmp);
+	  //lstMetabolites = metabolizer.calculateGlobals(lstMetabolitesNoExtinct);
 	  if (lstMetabolites != null && lstMetabolites.size() > 0)
 	  {
 		  Collections.sort(lstMetabolites, new Comparator<Metabolite>()
@@ -188,25 +191,33 @@ public class Metabolizer {
 	  return lstMetabolites;
   }
   
-  private void recurseMetaboliteTree(Metabolite metabolite, JSONObject joMetabIn)
+  private void recurseMetaboliteTree(Metabolite metabolite, JSONObject joMetabIn, HashMap<String, Metabolite> hashMap)
   {
 	  try
 	  {
 		  if (metabolite == null)
 			  return;
-		  
+
+		  if (metabolite.getState() == Metabolite.State.EXTINCT)
+			  return;
+
+		  if (hashMap.containsKey(metabolite.getKey()))
+		  	return;
+
+		  hashMap.put(metabolite.getKey(), metabolite);
+
+
 		  JSONObject joMet = getMetaboliteProperties(metabolite);
 		  joMetabIn.put(metabolite.getKey(), joMet);
 		  
 		  JSONObject joMetChildren = new JSONObject();
 		  
 		  if (metabolite.getChildCount() > 0)
-			joMet.put("metabolites", joMetChildren);  
-		  
-		  
+		  	joMet.put("metabolites", joMetChildren);
+
 		  for (int i=0;i< metabolite.getChildCount(); i++)
 		  {
-			  recurseMetaboliteTree(metabolite.getChild(i), joMetChildren);
+		  	recurseMetaboliteTree(metabolite.getChild(i), joMetChildren, hashMap);
 		  }		  
 	  }
 	  catch(Exception ex)
