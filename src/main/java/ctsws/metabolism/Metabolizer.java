@@ -125,17 +125,19 @@ public class Metabolizer {
       
 		    //This guy does most of the work
 		    List<Metabolite> lstMetabolites = metabolize(mtblzer, structure);
-      
-      
-		    JSONObject joMetabs = new JSONObject();
+
+			JSONObject joMetabs = null;
 		    JSONObject joParent = new JSONObject();
 
 			HashMap<String, Metabolite> hashMap = new HashMap<String, Metabolite>();
-		    recurseMetaboliteTree(lstMetabolites.get(0), joMetabs, hashMap);
+		    //recurseMetaboliteTree(lstMetabolites.get(0), hashMap);
+			MetNode node = RecurseMetabolites(lstMetabolites.get(0), hashMap);
+			joMetabs = node.ToJson();
 
 		    joParent.put("metabolites", joMetabs);
 		    JSONObject joMetTree = new JSONObject();
 		    joMetTree.put(structure, joParent);
+			//joMetTree.put(structure, joMetabs);
 
 		    joReturn = new JSONObject();
 		    joReturn.put("results", joMetTree);
@@ -190,43 +192,121 @@ public class Metabolizer {
 
 	  return lstMetabolites;
   }
-  
-  private void recurseMetaboliteTree(Metabolite metabolite, JSONObject joMetabIn, HashMap<String, Metabolite> hashMap)
+
+	private MetNode RecurseMetabolites(Metabolite metabolite, HashMap<String, Metabolite> hashMap)
+	{
+		MetNode node = null;
+		try
+		{
+			if (metabolite == null)
+				return null;
+
+			node = new MetNode(metabolite.getKey(), metabolite);
+			int numChildren = metabolite.getChildCount();
+
+			for (int i=0;i<metabolite.getChildCount();i++)
+			{
+				MetNode childNode = RecurseMetabolites(metabolite.getChild(i), hashMap);
+				String key = childNode.metabolite.getKey();
+				if (childNode.metabolite.getState() != Metabolite.State.EXTINCT)
+				{
+					if (!hashMap.containsKey(key))
+					{
+						node.children.add(childNode);
+						hashMap.put(childNode.metabolite.getKey(), childNode.metabolite);
+					}
+				}
+
+				//if (hashMap.containsKey(childNode.get_metabolite().getKey()))
+				//    node.add(childNode);
+				//return node;
+			}
+		}
+		catch(Exception ex)
+		{
+			String msg = ex.getMessage();
+			String msg2 = msg;
+		}
+		return node;
+	}
+
+
+/*
+  private JSONObject recurseMetaboliteTree(Metabolite metabolite, JSONObject joMetabParent, HashMap<String, Metabolite> hashMap)
   {
 	  try
 	  {
 		  if (metabolite == null)
-			  return;
+		      return null;
 
-		  if (metabolite.getState() == Metabolite.State.EXTINCT)
-			  return;
+          JSONObject joMet = getMetaboliteProperties(metabolite);
+
+
+          for (int i=0;i< metabolite.getChildCount(); i++)
+          {
+              JSONObject joChild = recurseMetaboliteTree(metabolite.getChild(i), joMet, hashMap);
+          }
+
+          if (metabolite.getState() == Metabolite.State.EXTINCT)
+		      return null;
 
 		  if (hashMap.containsKey(metabolite.getKey()))
-		  	return;
+		  	  return null;
 
 		  hashMap.put(metabolite.getKey(), metabolite);
-
-
-		  JSONObject joMet = getMetaboliteProperties(metabolite);
-		  joMetabIn.put(metabolite.getKey(), joMet);
+          joMetabParent.put(metabolite.getKey(), joMet);
 		  
 		  JSONObject joMetChildren = new JSONObject();
 		  
 		  if (metabolite.getChildCount() > 0)
 		  	joMet.put("metabolites", joMetChildren);
 
-		  for (int i=0;i< metabolite.getChildCount(); i++)
-		  {
-		  	recurseMetaboliteTree(metabolite.getChild(i), joMetChildren, hashMap);
-		  }		  
+
 	  }
 	  catch(Exception ex)
 	  {
 		  
 	  }	  
   }
-  
-	      
+*/
+  /*
+    private void recurseMetaboliteTreeOrig(Metabolite metabolite, JSONObject joMetabIn, HashMap<String, Metabolite> hashMap)
+    {
+        try
+        {
+            if (metabolite == null)
+                return;
+
+            if (metabolite.getState() == Metabolite.State.EXTINCT)
+                return;
+
+            if (hashMap.containsKey(metabolite.getKey()))
+                return;
+
+            hashMap.put(metabolite.getKey(), metabolite);
+
+
+            JSONObject joMet = getMetaboliteProperties(metabolite);
+            joMetabIn.put(metabolite.getKey(), joMet);
+
+            JSONObject joMetChildren = new JSONObject();
+
+            if (metabolite.getChildCount() > 0)
+                joMet.put("metabolites", joMetChildren);
+
+            for (int i=0;i< metabolite.getChildCount(); i++)
+            {
+                recurseMetaboliteTree(metabolite.getChild(i), joMetChildren, hashMap);
+            }
+        }
+        catch(Exception ex)
+        {
+
+        }
+    }
+
+*/
+/*
   private CTSMetabolite getCTSMetabolite(Metabolite metabolite) throws JSONException
   {
 	  if (metabolite == null)
@@ -260,9 +340,9 @@ public class Metabolizer {
 	  return met;
       
   }
+*/
 
-
-    
+/*
   private JSONObject getMetaboliteProperties(Metabolite metabolite) throws JSONException
   {
     JSONObject jo = new JSONObject();
@@ -307,59 +387,6 @@ public class Metabolizer {
     return jo;
 
   }
-  
-//Recursive function for call the ChemAxon Metablolizer.
-  //Use one instance of a parameterized Metabolizer but update the substrate at each level.
-  /*
-  private List<Metabolite> metabolize2(chemaxon.metabolism.Metabolizer metabolizer, String substrate, JSONObject jo, int depth)
-  {
-    List<Metabolite> lstMetabolites = null;
-    List<Metabolite> lstMetabolitesOut = null;
-
-    //Increment our depth
-    int currentDepth = depth + 1;
-    //Get out if we have reached our generation limit
-    if (currentDepth > _genLimit)
-      return null;
-
-    try
-    {
-      Molecule molecule = MolImporter.importMol(substrate);
-      metabolizer.setSubstrate(molecule, "1");
-      lstMetabolites = metabolizer.enumerate();
-
-      int count = lstMetabolites.size();
-      for (int i=0;i<count;i++)
-      {
-        Metabolite metabolite = lstMetabolites.get(i);
-        JSONObject joMetab = getMetaboliteProperties(metabolite);
-
-        if (joMetab != null)
-        {
-          String smiles = metabolite.getKey();
-          if (smiles.equalsIgnoreCase(substrate))
-            continue;
-          //Map that contains just metabolites
-          JSONObject joMetabs = new JSONObject();
-
-          lstMetabolitesOut = metabolize2(metabolizer, metabolite.getKey(), joMetabs, currentDepth);
-          joMetab.put("metabolites", joMetabs);
-          jo.put(smiles, joMetab);
-        }
-
-      }
-
-
-    }
-    catch(Exception ex)
-    {
-
-    }
-
-    return lstMetabolitesOut;
-
-  }
 */
-  
 
 }
