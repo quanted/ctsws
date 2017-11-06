@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Metabolizer Test</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!--script src="js/domain.js"></script -->
+<script type="text/javascript">
+serviceConfig = {
+  "contextPath": "${contextPath}",
+  "serviceLocation": "/sim/rest",
+};
+</script>
+
+<script type="text/javascript">
+	
+	function buildJSON()
+	{
+		var oMetab = {};
+        var substrate = $("#txtSubstrate").val();
+        var transLibs = $("#optTransLibs").val();
+        //var respiration = $("#optRespiration").val();
+        //var transformationProcesses = $("#optTransProc").val();
+        //var media = $("#optMedia").val();
+        var genLimit = $("#optGenLimit").val();
+        var popLimit = $("#optPopLimit").val();
+        var likelyLimit = $("#txtLikelyLimit").val();
+        var excludeCondition = $("#txtExcludeCondition").val();
+        //var generateImages = $("#chkGenImages").is(":checked");
+        
+        oMetab.structure = substrate;
+        oMetab.transformationLibraries = transLibs;
+        //oMetab.respiration = respiration;
+        //oMetab.media = media;
+        //oMetab.transformationProcesses = transformationProcesses;
+        oMetab.generationLimit = genLimit;
+        oMetab.populationLimit = popLimit;
+       	oMetab.likelyLimit = likelyLimit;
+       	oMetab.excludeCondition = excludeCondition;
+       	//oMetab.generateImages = generateImages;
+       	
+      	return oMetab;
+	}
+
+
+$(document).ready(function () {        
+    $("#btnShowJSON").click(function () {
+    	
+    	var oMetab = buildJSON();    	
+        var myval = JSON.stringify(oMetab);
+        
+    $("#txtJSON").val(myval);
+   });
+             
+    $('#btnMetabolize').click(function () {
+
+    	var oMetab = buildJSON(); 
+        
+        //alert(JSON.stringify(oMetab));
+        var surl = "http://localhost/ctsws/rest";
+                
+        $.ajax({
+            
+            //url: surl + "/metabolizer",
+            url: "/rest/metabolizer",
+        	type: "POST",                               
+                data: JSON.stringify(oMetab),
+                dataType: "json",
+                contentType: "application/json",                 
+                success: function (data) {                    
+                    var sval = JSON.stringify(data);
+                    //alert("Success: " + sval);
+                    $("#txtOutput").val(sval);
+                    
+                    //var result = JSON.parse(data);
+                    //var elem = result[0];
+                    //alert("Success: " + elem.imgurl);
+                    //$("#imgChem").attr("src", url);
+                    
+                },
+                error:function(xhr, data) {
+                	//alert(xhr);
+                	alert("Failure: " + data);
+                     $("#txtOutput").val(xhr.status + " " + xhr.statusText);  
+               },
+
+            });
+	});
+});
+</script>
+    <style type="text/css">
+        .style1
+        {
+            width: 352px;
+        }
+    </style>
+</head>
+<body>    
+    <h2>Metabolizer</h2>
+	<p>Metabolizer Parameters</p>
+<div>
+<table>
+<tr>
+<td>Substrate:</td><td class="style1"><input type="text" value="c1ccc(cc1)[N+](=O)[O-]" id="txtSubstrate" style="width: 300px"/></td>
+</tr>
+<tr>
+	<td>Transformation Libraries:</td>
+	<td class="style1">
+		<select multiple style="width: 300px" id="optTransLibs">
+  			<option value="hydrolysis">Hydrolysis</option>
+  			<option value="abiotic_reduction">Abiotic Reduction</option>
+  			<option value="combined_abioticreduction_hydrolysis">Human Biotransformation</option>
+		</select>
+	</td>
+</tr>
+<tr>
+	<td>Generation Limit:</td>
+	<td class="style1">
+		<select style="width: 300px" id="optGenLimit">
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		</select>
+	</td>
+</tr>
+<tr>
+	<td>Population Limit:</td>
+	<td class="style1">
+		<select style="width: 300px" id="optPopLimit">
+	  		<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+		</select>
+	</td>
+</tr>
+<tr>
+	<td>Likely Limit:</td>
+	<td class="style1"><input type="text" value="0.1" id="txtLikelyLimit"/></td>
+</tr>
+<tr>
+	<td>Exclude Condition:</td>
+	<td class="style1">
+		<input type="text" value="" id="txtExcludeCondition"/>
+	</td>
+</tr>
+<tr>
+    <td>
+        <button id="btnMetabolize">Run</button>
+    </td>
+</tr>
+<tr></tr>
+</table>
+<table>
+<tr>
+<td>
+<textarea rows="4" cols="50" id="txtOutput">
+This is the original text for output.
+</textarea>
+</td>
+</tr>
+<tr>
+    <td>
+        <button id="btnShowJSON">Show JSON</button>
+    </td>
+    <tr><td><textarea rows="4" cols="50" id="txtJSON">
+This is the original text for JSON.
+</textarea></td></tr>
+</tr>
+</table>
+</div>
+</body>
+</html>
