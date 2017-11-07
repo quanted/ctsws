@@ -210,11 +210,11 @@ public class Metabolizer {
 				String key = childNode.metabolite.getKey();
 				if (childNode.metabolite.getState() != Metabolite.State.EXTINCT)
 				{
-					if (!hashMap.containsKey(key))
-					{
+					//if (!hashMap.containsKey(key))
+					//{
 						node.children.add(childNode);
-						hashMap.put(childNode.metabolite.getKey(), childNode.metabolite);
-					}
+						//hashMap.put(childNode.metabolite.getKey(), childNode.metabolite);
+					//}
 				}
 
 				//if (hashMap.containsKey(childNode.get_metabolite().getKey()))

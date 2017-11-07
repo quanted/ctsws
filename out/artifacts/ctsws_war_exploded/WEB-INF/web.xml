@@ -27,7 +27,7 @@
     <context-param>
         <param-name>abiotic_reduction</param-name>
         <param-value>Reactions\AbioticReduction_v1.4.mrv</param-value>
-    </context-param>    
+    </context-param>
     <context-param>
         <param-name>hydrolysis</param-name>
         <param-value>Reactions\Hydrolysis_v1.7.mrv</param-value>
