@@ -63,12 +63,12 @@ $(document).ready(function () {
             //url: surl + "/metabolizer",
             url: "/ctsws/rest/metabolizer",
         	type: "POST",                               
-                data: JSON.stringify(oMetab),
+                //data: JSON.stringify(oMetab),
+                data: $("#txtJSON").val(),
                 dataType: "json",
                 contentType: "application/json",                 
                 success: function (data) {                    
-                    //var sval = JSON.stringify(data);
-                    var sval = $("#txtJSON").val();
+                    var sval = JSON.stringify(data);                    
                     //alert("Success: " + sval);
                     $("#txtOutput").val(sval);
                     
