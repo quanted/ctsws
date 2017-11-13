@@ -56,18 +56,19 @@ $(document).ready(function () {
     	var oMetab = buildJSON(); 
         
         //alert(JSON.stringify(oMetab));
-        var surl = "http://localhost/ctsws/rest";
+        //var surl = "http://localhost/ctsws/rest";
                 
         $.ajax({
             
             //url: surl + "/metabolizer",
-            url: "/rest/metabolizer",
+            url: "/ctsws/rest/metabolizer",
         	type: "POST",                               
                 data: JSON.stringify(oMetab),
                 dataType: "json",
                 contentType: "application/json",                 
                 success: function (data) {                    
-                    var sval = JSON.stringify(data);
+                    //var sval = JSON.stringify(data);
+                    var sval = $("#txtJSON").val();
                     //alert("Success: " + sval);
                     $("#txtOutput").val(sval);
                     
