@@ -18,6 +18,10 @@ serviceConfig = {
 		var oMetab = {};
         var substrate = $("#txtSubstrate").val();
         var transLibs = $("#optTransLibs").val();
+        if (transLibs != "mammalian")
+        {
+            oMetab.transformationLibraries = transLibs;
+        }            
         //var respiration = $("#optRespiration").val();
         //var transformationProcesses = $("#optTransProc").val();
         //var media = $("#optMedia").val();
@@ -28,7 +32,7 @@ serviceConfig = {
         //var generateImages = $("#chkGenImages").is(":checked");
         
         oMetab.structure = substrate;
-        oMetab.transformationLibraries = transLibs;
+        
         //oMetab.respiration = respiration;
         //oMetab.media = media;
         //oMetab.transformationProcesses = transformationProcesses;
@@ -109,7 +113,8 @@ $(document).ready(function () {
 		<select multiple style="width: 300px" id="optTransLibs">
   			<option value="hydrolysis">Hydrolysis</option>
   			<option value="abiotic_reduction">Abiotic Reduction</option>
-  			<option value="combined_abioticreduction_hydrolysis">Combined</option>
+            <option value="combined_abioticreduction_hydrolysis">Combined</option>
+            <option value="mammalian">Mammalian</option>
 		</select>
 	</td>
 </tr>
@@ -171,7 +176,9 @@ This is the original text for output.
     </td>
     <tr><td><textarea rows="4" cols="50" id="txtJSON">
 This is the original text for JSON.
-</textarea></td></tr>
+</textarea>
+</td>
+</tr>
 </table>
 </div>
 </body>
