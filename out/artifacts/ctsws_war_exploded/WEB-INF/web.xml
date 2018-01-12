@@ -37,6 +37,10 @@
         <param-value>Reactions\Combo_AbiHyd1.7_AbiRed1.4.mrv</param-value>
     </context-param>
     <context-param>
+        <param-name>fragments</param-name>
+        <param-value>Reactions\ReactorFragment_v1.0.mrv</param-value>
+    </context-param>
+    <context-param>
         <param-name>chemimages</param-name>
         <param-value>chemimages</param-value>
     </context-param>

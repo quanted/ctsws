@@ -10,7 +10,6 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 
 //import com.chemaxon.calculations.io.formats.*;
-
 import chemaxon.formats.MolImporter;
 //import chemaxon.formats.MolImporter;
 import chemaxon.metabolism.*;
@@ -30,8 +29,7 @@ import org.json.*;
 
 // The browser requests per default the HTML MIME type.
 
-//Sets the path to base URL + /hello
-@Path("/metabolizer")
+@Path("/")
 public class Metabolizer {
 	
 	private ServletContext context;
@@ -45,6 +43,7 @@ public class Metabolizer {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
+	@Path("metabolizer")
 	public String getMetabolites(String sMetabParams)
 	{
 		JSONObject joReturn = null;
@@ -228,6 +227,72 @@ public class Metabolizer {
 			String msg2 = msg;
 		}
 		return node;
+	}
+
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("fragments")
+	public String getFragments(String sChemical)
+	{
+		JSONObject joReturn = null;
+		String retVal = null;
+
+		String realPath = context.getRealPath("/");
+		//String fragmentLib = "ReactorFragment_v1.0.mrv";
+		String fragmentLib = "";
+
+		try
+		{
+			fragmentLib = context.getInitParameter("fragments");
+			JSONObject metabolizerParams = new JSONObject(sChemical);
+
+			String structure = metabolizerParams.getString("structure");
+			JSONArray transformationLibs = null;
+
+			ArrayList<RxnMolecule> reactionList = new ArrayList<RxnMolecule>();
+			MolImporter importer = null;
+			importer = new MolImporter(realPath + fragmentLib);
+			RxnMolecule tempMolecule;
+			while ((tempMolecule=((RxnMolecule)importer.read()))!= null)
+			{
+				reactionList.add(tempMolecule);
+			}
+			importer.close();
+
+			chemaxon.metabolism.Metabolizer mtblzer = new chemaxon.metabolism.Metabolizer();
+			mtblzer.setReactions(reactionList);
+			mtblzer.setExhaustive(true);
+			//mtblzer.setLikelyLimit(likelyLimit);
+			//mtblzer.setPopulationLimit(popLimit);
+			//mtblzer.setGenerationLimit(genLimit);
+			//mtblzer.setExcludeCondition(excludeCond);
+
+			Molecule molecule = MolImporter.importMol(structure);
+			mtblzer.setSubstrate(molecule,structure);
+
+			// execute enumeration and get the resulting metabolite list
+			List<Metabolite> lstMetabolites = null;
+			List<Metabolite> lstMetabolitesTmp = mtblzer.enumerate();
+			lstMetabolites = mtblzer.calculateGlobals(lstMetabolitesTmp);
+			List<String> lstSmiles = new ArrayList<String>();
+
+			for (int i=0; i<lstMetabolites.size(); i++)
+			{
+				Metabolite metabolite = lstMetabolites.get(i);
+				lstSmiles.add(metabolite.getKey());
+			}
+
+			JSONObject joFragments = new JSONObject();
+			joFragments.put("fragments", lstSmiles);
+			retVal = joFragments.toString();
+		}
+		catch(Exception ex)
+		{
+			String msg = ex.getMessage();
+			String msg2 = msg;
+		}
+		return retVal;
 	}
 
 
