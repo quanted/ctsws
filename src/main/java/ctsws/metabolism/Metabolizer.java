@@ -4,6 +4,7 @@ import java.util.*;
 import java.io.IOException;
 import java.util.Collections;
 
+import java.io.File;
 
 import javax.servlet.ServletContext;
 import javax.ws.rs.*;
@@ -99,6 +100,7 @@ public class Metabolizer {
 		    	if (transLib != null)
 		    	{
 		    		//transLib = context.getInitParameter(transformationLibs.getString(i));
+					transLib = transLib.replace('\\', File.separatorChar);
 		    		importer = new MolImporter(realPath + transLib);
 		    		RxnMolecule tempMolecule;
 		    		while ((tempMolecule=((RxnMolecule)importer.read()))!= null)
