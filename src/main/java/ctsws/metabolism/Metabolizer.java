@@ -67,18 +67,35 @@ public class Metabolizer {
 		    int popLimit = metabolizerParams.getInt("populationLimit");
 		    String excludeCond = metabolizerParams.getString("excludeCondition");
 
+			//Don't load a library if mammalian_metabolism is specified, the default (Human metabolism) library is loaded.
+			chemaxon.metabolism.Metabolizer mtblzer = new chemaxon.metabolism.Metabolizer();
 
 		    ArrayList<RxnMolecule> reactionList = new ArrayList<RxnMolecule>();
 		    //Get a list of reactions from reaction libraries.
-		    if (transformationLibs != null)
-		    {
-    	
-		    	String transLib = null;
-		    	MolImporter importer = null;
-    	  
-		    	//If two libraries are specified, then use the combined abiotic reduction 
-		    	//& hydrolysis library
-		    	int nLibs = transformationLibs.length();
+		    if (transformationLibs != null) {
+
+				String transLib = null;
+				MolImporter importer = null;
+
+				//No longer loading multiple reaction libraries.
+				//They are combined into single libraries.
+				String rxnLib = transformationLibs.getString(0);
+
+				if (!rxnLib.equalsIgnoreCase("mammalian_metabolism")) {
+					transLib = context.getInitParameter(transformationLibs.getString(0));
+					transLib = transLib.replace('\\', File.separatorChar);
+					importer = new MolImporter(realPath + transLib);
+					RxnMolecule tempMolecule;
+					while ((tempMolecule = ((RxnMolecule) importer.read())) != null) {
+						reactionList.add(tempMolecule);
+					}
+					importer.close();
+					importer = null;
+					mtblzer.setReactions(reactionList);
+				}
+			}
+
+		    	/*int nLibs = transformationLibs.length();
 		    	switch(nLibs)
 		    	{
 		    		case 0:
@@ -94,10 +111,11 @@ public class Metabolizer {
 		    			break;
 		    			//Need to throw error
 		    	}
-		    	
+		    	*/
 		    	//for (int i=0;i<nLibs;i++)
 		    	//{
-		    	if (transLib != null)
+		    	/*
+				if (transLib != null)
 		    	{
 		    		//transLib = context.getInitParameter(transformationLibs.getString(i));
 					transLib = transLib.replace('\\', File.separatorChar);
@@ -110,14 +128,11 @@ public class Metabolizer {
 		    		importer.close();
 		    		importer = null;
 		    	}
+		    	*/
 		    	//}
-		    }
+		    //}
 
 
-		    //If no reaction libraries are specified, the default (Human metabolism) library is loaded.
-		    chemaxon.metabolism.Metabolizer mtblzer = new chemaxon.metabolism.Metabolizer();
-		    if (transformationLibs != null)
-		    	mtblzer.setReactions(reactionList);
 
 		    mtblzer.setExhaustive(false);
 		    mtblzer.setLikelyLimit(likelyLimit);
