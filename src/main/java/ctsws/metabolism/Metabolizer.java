@@ -108,6 +108,7 @@ public class Metabolizer {
 		    			reactionList.add(tempMolecule);
 		    		}
 		    		importer.close();
+		    		importer = null;
 		    	}
 		    	//}
 		    }

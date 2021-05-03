@@ -41,6 +41,10 @@
         <param-value>Reactions\ReactorFragment_v1.0.mrv</param-value>
     </context-param>
     <context-param>
+        <param-name>photolysis</param-name>
+        <param-value>Reactions\DirPhotoLib_041420.mrv</param-value>
+    </context-param>
+    <context-param>
         <param-name>chemimages</param-name>
         <param-value>chemimages</param-value>
     </context-param>

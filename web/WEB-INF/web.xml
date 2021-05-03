@@ -26,19 +26,15 @@
     </session-config>
     <context-param>
         <param-name>abiotic_reduction</param-name>
-        <param-value>Reactions\AbioticReduction_v1.4.mrv</param-value>
+        <param-value>Reactions\AbioticReduction_v1.5_wSpRxn.mrv</param-value>
     </context-param>
     <context-param>
         <param-name>hydrolysis</param-name>
-        <param-value>Reactions\Hydrolysis_v1.7.mrv</param-value>
+        <param-value>Reactions\Hydrolysis_v1.8_wSpRxn.mrv</param-value>
     </context-param>
     <context-param>
         <param-name>combined_abioticreduction_hydrolysis</param-name>
-        <param-value>Reactions\Combo_AbiHyd1.7_AbiRed1.4.mrv</param-value>
-    </context-param>
-    <context-param>
-        <param-name>fragments</param-name>
-        <param-value>Reactions\ReactorFragment_v1.0.mrv</param-value>
+        <param-value>Reactions\Combo_AbiHyd1.8_AbiRed1.5_wSpRxn.mrv</param-value>
     </context-param>
     <context-param>
         <param-name>photolysis</param-name>
