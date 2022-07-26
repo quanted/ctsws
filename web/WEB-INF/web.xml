@@ -53,6 +53,10 @@
         <param-value>Reactions\DirPhotoLib_RankedwSpRxn_ver1-3.mrv</param-value>
     </context-param>
     <context-param>
+        <param-name>pfas_environmental</param-name>
+        <param-value>Reactions\PFAS_EnvironmentalRxnLib_v1.1.mrv</param-value>
+    </context-param>
+    <context-param>
         <param-name>chemimages</param-name>
         <param-value>chemimages</param-value>
     </context-param>
