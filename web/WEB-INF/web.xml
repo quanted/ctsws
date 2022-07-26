@@ -25,20 +25,32 @@
         <session-timeout>15</session-timeout>
     </session-config>
     <context-param>
+        <param-name>mammalian_metabolism</param-name>
+        <param-value>mammalian_metabolism</param-value>
+    </context-param>
+    <context-param>
         <param-name>abiotic_reduction</param-name>
-        <param-value>Reactions\AbioticReduction_v1.4.mrv</param-value>
+        <param-value>Reactions\AbioticReduction_v1.5_wSpRxn.mrv</param-value>
     </context-param>
     <context-param>
         <param-name>hydrolysis</param-name>
-        <param-value>Reactions\Hydrolysis_v1.7.mrv</param-value>
+        <param-value>Reactions\Hydrolysis_v1.8_wSpRxn.mrv</param-value>
     </context-param>
     <context-param>
         <param-name>combined_abioticreduction_hydrolysis</param-name>
-        <param-value>Reactions\Combo_AbiHyd1.7_AbiRed1.4.mrv</param-value>
+        <param-value>Reactions\Combo_AbiHyd1.8_AbiRed1.5_wSpRxn.mrv</param-value>
     </context-param>
     <context-param>
-        <param-name>fragments</param-name>
-        <param-value>Reactions\ReactorFragment_v1.0.mrv</param-value>
+        <param-name>combined_photolysis_abiotic_hydrolysis</param-name>
+        <param-value>Reactions\Combo_DirPhotoLib1.3_AbiHyd1.8_wSpRxn.mrv</param-value>
+    </context-param>
+    <context-param>
+        <param-name>photolysis_unranked</param-name>
+        <param-value>Reactions\DirPhotoLib_Unranked_ver1-0.mrv</param-value>
+    </context-param>
+    <context-param>
+        <param-name>photolysis_ranked</param-name>
+        <param-value>Reactions\DirPhotoLib_RankedwSpRxn_ver1-3.mrv</param-value>
     </context-param>
     <context-param>
         <param-name>chemimages</param-name>
