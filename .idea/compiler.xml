@@ -9,8 +9,8 @@
         <module name="ctsws" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="ctsws" target="1.5" />
+    <bytecodeTargetLevel target="19">
+      <module name="ctsws" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

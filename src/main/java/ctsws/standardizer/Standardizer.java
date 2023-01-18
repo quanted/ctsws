@@ -3,8 +3,11 @@ package ctsws.standardizer;
 import java.util.*;
 
 import javax.servlet.ServletContext;
-import javax.ws.rs.*;
-import javax.ws.rs.core.*;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Context;
+//import javax.ws.rs.*;
+//import javax.ws.rs.core.*;
 
 //import chemaxon.formats.MolFormatException;
 import chemaxon.formats.MolImporter;

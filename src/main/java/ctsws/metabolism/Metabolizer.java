@@ -7,8 +7,11 @@ import java.util.Collections;
 import java.io.File;
 
 import javax.servlet.ServletContext;
-import javax.ws.rs.*;
-import javax.ws.rs.core.*;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.Context;
+import jakarta.ws.rs.core.MediaType;
+//import javax.ws.rs.*;
+//import javax.ws.rs.core.*;
 
 //import com.chemaxon.calculations.io.formats.*;
 import chemaxon.formats.MolImporter;
