@@ -1,0 +1,26 @@
+version: '3'
+volumes:
+  collected_static:
+services:
+
+  # Apache Tomcat container
+  cts-tomcat:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cts-tomcat-testing
+    container_name: cts-tomcat-testing
+    # expose:
+    #   - "8080"
+    ports:
+      - "8082:8080"
+    environment:
+      - JAVA_OPTS=-Xmx1g
+      - LOG4J_FORMAT_MSG_NO_LOOKUPS=true
+    volumes:
+      - .:/src
+      - ./settings.xml:/root/.m2/settings.xml
+    #   - ./secrets/tomcat/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+    #   - ./secrets/tomcat/webapps:/usr/local/tomcat/webapps
+    #   - ./secrets/tomcat/chemaxon/licenses:/home/tomcat/.chemaxon/licenses
