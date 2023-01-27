@@ -14,6 +14,8 @@ COPY ctsws/ /ctsws
 
 COPY ctsws/repository/ /root/.m2/repository
 
+COPY ctsws/settings.xml /root/.m2/settings.xml
+
 WORKDIR /ctsws
 
 # Builds ctsws:

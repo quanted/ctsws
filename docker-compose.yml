@@ -1,15 +1,14 @@
 version: '3'
 
 services:
-
-  # Apache Tomcat container
-  cts-tomcat:
+  # CTSWS Apache Tomcat container
+  ctsws:
     restart: unless-stopped
     build:
       context: .
       dockerfile: Dockerfile
-    image: cts-tomcat-testing
-    container_name: cts-tomcat-testing
+    image: ${CTSWS_IMAGE:-ghcr.io/quanted/ctsws:docker}
+    container_name: ctsws
     # expose:
     #   - "8080"
     ports:
@@ -20,12 +19,5 @@ services:
       - CHEMAXON_LICENSE_URL=/root/.chemaxon/licenses/license.cxl
       - SERVER_USERNAME=${SERVER_USERNAME}
       - SERVER_PASSWORD=${SERVER_PASSWORD}
-      - CTSWS_VERSION=1.0
     volumes:
-      # - .:/src
-      - ./ctsws/settings.xml:/root/.m2/settings.xml
-      - ./ctsws/repository:/root/.m2/repository
       - ./chemaxon/license.cxl:/root/.chemaxon/licenses/license.cxl
-    #   - ./secrets/tomcat/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
-    #   - ./secrets/tomcat/webapps:/usr/local/tomcat/webapps
-    #   - ./secrets/tomcat/chemaxon/licenses:/home/tomcat/.chemaxon/licenses

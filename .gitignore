@@ -23,7 +23,6 @@
 hs_err_pid*
 
 # ChemAxon files
-ctsws/settings.xml
 license.cxl
 
 # Docker files
