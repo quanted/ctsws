@@ -12,6 +12,7 @@
 
 # Package Files #
 *.jar
+!jchem-16.1.4.0.jar
 *.war
 *.nar
 *.ear
