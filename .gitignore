@@ -28,5 +28,3 @@ license.cxl
 
 # Docker files
 .env
-
-ctsws/repository/*
