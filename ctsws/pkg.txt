@@ -1,0 +1,1073 @@
+Apache Maven 3.8.6 (84538c9988a25aec085021c365c560670ad80f63)
+Maven home: C:\Users\KWOLFE\Documents\apache-maven-3.8.6
+Java version: 15.0.2, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-15.0.2
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
+[DEBUG] Created new class realm maven.api
+[DEBUG] Importing foreign packages into class realm maven.api
+[DEBUG]   Imported: javax.annotation.* < plexus.core
+[DEBUG]   Imported: javax.annotation.security.* < plexus.core
+[DEBUG]   Imported: javax.inject.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.classrealm < plexus.core
+[DEBUG]   Imported: org.apache.maven.cli < plexus.core
+[DEBUG]   Imported: org.apache.maven.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.exception < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution.scope < plexus.core
+[DEBUG]   Imported: org.apache.maven.lifecycle < plexus.core
+[DEBUG]   Imported: org.apache.maven.model < plexus.core
+[DEBUG]   Imported: org.apache.maven.monitor < plexus.core
+[DEBUG]   Imported: org.apache.maven.plugin < plexus.core
+[DEBUG]   Imported: org.apache.maven.profiles < plexus.core
+[DEBUG]   Imported: org.apache.maven.project < plexus.core
+[DEBUG]   Imported: org.apache.maven.reporting < plexus.core
+[DEBUG]   Imported: org.apache.maven.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.rtinfo < plexus.core
+[DEBUG]   Imported: org.apache.maven.settings < plexus.core
+[DEBUG]   Imported: org.apache.maven.toolchain < plexus.core
+[DEBUG]   Imported: org.apache.maven.usability < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.events < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.observers < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.resource < plexus.core
+[DEBUG]   Imported: org.codehaus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.* < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.component < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.configuration < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.container < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.context < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.logging < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.personality < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.* < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.artifact < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.collection < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.deployment < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.graph < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.installation < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.internal.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.metadata < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.repository < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.resolution < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.spi < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.transfer < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.version < plexus.core
+[DEBUG]   Imported: org.fusesource.jansi.* < plexus.core
+[DEBUG]   Imported: org.slf4j.* < plexus.core
+[DEBUG]   Imported: org.slf4j.event.* < plexus.core
+[DEBUG]   Imported: org.slf4j.helpers.* < plexus.core
+[DEBUG]   Imported: org.slf4j.spi.* < plexus.core
+[DEBUG] Populating class realm maven.api
+[INFO] Error stacktraces are turned on.
+[DEBUG] Message scheme: color
+[DEBUG] Message styles: debug info warning error success failure strong mojo project
+[DEBUG] Reading global settings from C:\Users\KWOLFE\Documents\apache-maven-3.8.6\conf\settings.xml
+[DEBUG] Reading user settings from C:\Users\KWOLFE\.m2\settings.xml
+[DEBUG] Reading global toolchains from C:\Users\KWOLFE\Documents\apache-maven-3.8.6\conf\toolchains.xml
+[DEBUG] Reading user toolchains from C:\Users\KWOLFE\.m2\toolchains.xml
+[DEBUG] Using local repository at C:\Users\KWOLFE\.m2\repository
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10.0 for C:\Users\KWOLFE\.m2\repository
+[INFO] Scanning for projects...
+[DEBUG] Extension realms for project ctsws:ctsws:war:1.0-SNAPSHOT: (none)
+[DEBUG] Looking up lifecycle mappings for packaging war from ClassRealm[plexus.core, parent: null]
+[DEBUG] === REACTOR BUILD PLAN ================================================
+[DEBUG] Project: ctsws:ctsws:war:1.0-SNAPSHOT
+[DEBUG] Tasks:   [package]
+[DEBUG] Style:   Regular
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] ----------------------------< ctsws:ctsws >-----------------------------
+[INFO] Building ctsws 1.0-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for apache.snapshots (http://repository.apache.org/snapshots).
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       ctsws:ctsws:1.0-SNAPSHOT
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [compile, compile+runtime, test]
+[DEBUG] Repositories (dependencies): [ChemAxon Public Repository (https://hub.chemaxon.com, default, releases+snapshots), central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] Repositories (plugins)     : [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:2.6:resources (default-resources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <escapeString>${maven.resources.escapeString}</escapeString>
+  <escapeWindowsPaths default-value="true">${maven.resources.escapeWindowsPaths}</escapeWindowsPaths>
+  <includeEmptyDirs default-value="false">${maven.resources.includeEmptyDirs}</includeEmptyDirs>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <overwrite default-value="false">${maven.resources.overwrite}</overwrite>
+  <project default-value="${project}"/>
+  <resources default-value="${project.resources}"/>
+  <session default-value="${session}"/>
+  <supportMultiLineFiltering default-value="false">${maven.resources.supportMultiLineFiltering}</supportMultiLineFiltering>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <classpathElements default-value="${project.compileClasspathElements}"/>
+  <compileSourceRoots default-value="${project.compileSourceRoots}"/>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <forceJavacCompilerUse default-value="false">${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedSourcesDirectory default-value="${project.build.directory}/generated-sources/annotations"/>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <mojoExecution>${mojoExecution}</mojoExecution>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <projectArtifact default-value="${project.artifact}"/>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="false">${maven.compiler.showWarnings}</showWarnings>
+  <skipMain>${maven.main.skip}</skipMain>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.5">${maven.compiler.source}</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.5">${maven.compiler.target}</target>
+  <useIncrementalCompilation default-value="true">${maven.compiler.useIncrementalCompilation}</useIncrementalCompilation>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+  <mavenSession default-value="${session}"/>
+  <session default-value="${session}"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:2.6:testResources (default-testResources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <escapeString>${maven.resources.escapeString}</escapeString>
+  <escapeWindowsPaths default-value="true">${maven.resources.escapeWindowsPaths}</escapeWindowsPaths>
+  <includeEmptyDirs default-value="false">${maven.resources.includeEmptyDirs}</includeEmptyDirs>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <overwrite default-value="false">${maven.resources.overwrite}</overwrite>
+  <project default-value="${project}"/>
+  <resources default-value="${project.testResources}"/>
+  <session default-value="${session}"/>
+  <skip>${maven.test.skip}</skip>
+  <supportMultiLineFiltering default-value="false">${maven.resources.supportMultiLineFiltering}</supportMultiLineFiltering>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <classpathElements default-value="${project.testClasspathElements}"/>
+  <compileSourceRoots default-value="${project.testCompileSourceRoots}"/>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <forceJavacCompilerUse default-value="false">${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedTestSourcesDirectory default-value="${project.build.directory}/generated-test-sources/test-annotations"/>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <mojoExecution>${mojoExecution}</mojoExecution>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="false">${maven.compiler.showWarnings}</showWarnings>
+  <skip>${maven.test.skip}</skip>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.5">${maven.compiler.source}</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.5">${maven.compiler.target}</target>
+  <testSource>${maven.compiler.testSource}</testSource>
+  <testTarget>${maven.compiler.testTarget}</testTarget>
+  <useIncrementalCompilation default-value="true">${maven.compiler.useIncrementalCompilation}</useIncrementalCompilation>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+  <mavenSession default-value="${session}"/>
+  <session default-value="${session}"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <argLine>${argLine}</argLine>
+  <basedir default-value="${basedir}"/>
+  <childDelegation default-value="false">${childDelegation}</childDelegation>
+  <classesDirectory default-value="${project.build.outputDirectory}"/>
+  <debugForkedProcess>${maven.surefire.debug}</debugForkedProcess>
+  <disableXmlReport default-value="false">${disableXmlReport}</disableXmlReport>
+  <enableAssertions default-value="true">${enableAssertions}</enableAssertions>
+  <excludedGroups>${excludedGroups}</excludedGroups>
+  <failIfNoSpecifiedTests>${surefire.failIfNoSpecifiedTests}</failIfNoSpecifiedTests>
+  <failIfNoTests>${failIfNoTests}</failIfNoTests>
+  <forkMode default-value="once">${forkMode}</forkMode>
+  <forkedProcessTimeoutInSeconds>${surefire.timeout}</forkedProcessTimeoutInSeconds>
+  <groups>${groups}</groups>
+  <junitArtifactName default-value="junit:junit">${junitArtifactName}</junitArtifactName>
+  <jvm>${jvm}</jvm>
+  <localRepository default-value="${localRepository}"/>
+  <objectFactory>${objectFactory}</objectFactory>
+  <parallel>${parallel}</parallel>
+  <parallelMavenExecution default-value="${session.parallel}"/>
+  <perCoreThreadCount default-value="true">${perCoreThreadCount}</perCoreThreadCount>
+  <pluginArtifactMap>${plugin.artifactMap}</pluginArtifactMap>
+  <pluginDescriptor default-value="${plugin}"/>
+  <printSummary default-value="true">${surefire.printSummary}</printSummary>
+  <projectArtifactMap>${project.artifactMap}</projectArtifactMap>
+  <redirectTestOutputToFile default-value="false">${maven.test.redirectTestOutputToFile}</redirectTestOutputToFile>
+  <remoteRepositories default-value="${project.pluginArtifactRepositories}"/>
+  <reportFormat default-value="brief">${surefire.reportFormat}</reportFormat>
+  <reportNameSuffix default-value="">${surefire.reportNameSuffix}</reportNameSuffix>
+  <reportsDirectory default-value="${project.build.directory}/surefire-reports"/>
+  <runOrder default-value="filesystem"/>
+  <skip default-value="false">${maven.test.skip}</skip>
+  <skipExec>${maven.test.skip.exec}</skipExec>
+  <skipTests default-value="false">${skipTests}</skipTests>
+  <test>${test}</test>
+  <testClassesDirectory default-value="${project.build.testOutputDirectory}"/>
+  <testFailureIgnore default-value="false">${maven.test.failure.ignore}</testFailureIgnore>
+  <testNGArtifactName default-value="org.testng:testng">${testNGArtifactName}</testNGArtifactName>
+  <testSourceDirectory default-value="${project.build.testSourceDirectory}"/>
+  <threadCount>${threadCount}</threadCount>
+  <trimStackTrace default-value="true">${trimStackTrace}</trimStackTrace>
+  <useFile default-value="true">${surefire.useFile}</useFile>
+  <useManifestOnlyJar default-value="true">${surefire.useManifestOnlyJar}</useManifestOnlyJar>
+  <useSystemClassLoader default-value="true">${surefire.useSystemClassLoader}</useSystemClassLoader>
+  <useUnlimitedThreads default-value="false">${useUnlimitedThreads}</useUnlimitedThreads>
+  <workingDirectory>${basedir}</workingDirectory>
+  <project default-value="${project}"/>
+  <session default-value="${session}"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-war-plugin:3.3.2:war (default-war)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <archiveClasses default-value="false"/>
+  <attachClasses default-value="false"/>
+  <classesClassifier default-value="classes"/>
+  <classesDirectory default-value="${project.build.outputDirectory}"/>
+  <escapedBackslashesInFilePath default-value="false"/>
+  <filteringDeploymentDescriptors default-value="false"/>
+  <includeEmptyDirectories default-value="false"/>
+  <outdatedCheckPath default-value="WEB-INF/lib/"/>
+  <outputDirectory default-value="${project.build.directory}"/>
+  <outputTimestamp default-value="${project.build.outputTimestamp}"/>
+  <primaryArtifact default-value="true"/>
+  <project default-value="${project}"/>
+  <recompressZippedFiles default-value="true"/>
+  <resourceEncoding default-value="${project.build.sourceEncoding}"/>
+  <session default-value="${session}"/>
+  <skip default-value="false">${maven.war.skip}</skip>
+  <supportMultiLineFiltering default-value="false"/>
+  <useDefaultDelimiters default-value="true"/>
+  <useJvmChmod default-value="true"/>
+  <warName default-value="${project.build.finalName}"/>
+  <warSourceDirectory default-value="${basedir}/src/main/webapp"/>
+  <warSourceIncludes default-value="**"/>
+  <webappDirectory default-value="${project.build.directory}/${project.build.finalName}"/>
+  <workDirectory default-value="${project.build.directory}/war/work"/>
+</configuration>
+[DEBUG] =======================================================================
+[DEBUG] Resolving artifact com.chemaxon:jchem:pom:16.1.4.0 from [ChemAxon Public Repository (https://hub.chemaxon.com, default, releases+snapshots), central (https://repo.maven.apache.org/maven2, default, releases)]
+[WARNING] The POM for com.chemaxon:jchem:jar:16.1.4.0 is missing, no dependency information available
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=722800, ConflictMarker.markTime=178800, ConflictMarker.nodeCount=88, ConflictIdSorter.graphTime=351800, ConflictIdSorter.topsortTime=270800, ConflictIdSorter.conflictIdCount=42, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=3835700, ConflictResolver.conflictItemCount=72, DefaultDependencyCollector.collectTime=154559700, DefaultDependencyCollector.transformTime=6896500}
+[DEBUG] ctsws:ctsws:war:1.0-SNAPSHOT
+[DEBUG]    jakarta.servlet:jakarta.servlet-api:jar:5.0.0:provided
+[DEBUG]    org.glassfish.jersey.containers:jersey-container-servlet:jar:3.0.4:compile
+[DEBUG]       org.glassfish.jersey.containers:jersey-container-servlet-core:jar:3.0.4:compile
+[DEBUG]          jakarta.inject:jakarta.inject-api:jar:2.0.0:compile
+[DEBUG]       org.glassfish.jersey.core:jersey-common:jar:3.0.4:compile
+[DEBUG]          jakarta.annotation:jakarta.annotation-api:jar:2.0.0:compile
+[DEBUG]          org.glassfish.hk2:osgi-resource-locator:jar:1.0.3:compile
+[DEBUG]       org.glassfish.jersey.core:jersey-server:jar:3.0.4:compile
+[DEBUG]          org.glassfish.jersey.core:jersey-client:jar:3.0.4:compile
+[DEBUG]          jakarta.validation:jakarta.validation-api:jar:3.0.0:compile
+[DEBUG]       jakarta.ws.rs:jakarta.ws.rs-api:jar:3.0.0:compile
+[DEBUG]    org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.0.4:compile
+[DEBUG]       org.glassfish.jersey.ext:jersey-entity-filtering:jar:3.0.4:compile
+[DEBUG]       com.fasterxml.jackson.core:jackson-annotations:jar:2.13.0:compile
+[DEBUG]       com.fasterxml.jackson.core:jackson-databind:jar:2.13.0:compile
+[DEBUG]          com.fasterxml.jackson.core:jackson-core:jar:2.13.0:compile
+[DEBUG]       com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations:jar:2.13.0:compile
+[DEBUG]       jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.1:compile
+[DEBUG]          com.sun.activation:jakarta.activation:jar:2.0.1:compile
+[DEBUG]    org.glassfish.jersey.inject:jersey-hk2:jar:3.0.4:compile
+[DEBUG]       org.glassfish.hk2:hk2-locator:jar:3.0.1:compile
+[DEBUG]          org.glassfish.hk2.external:aopalliance-repackaged:jar:3.0.1:compile
+[DEBUG]          org.glassfish.hk2:hk2-api:jar:3.0.1:compile
+[DEBUG]          org.glassfish.hk2:hk2-utils:jar:3.0.1:compile
+[DEBUG]       org.javassist:javassist:jar:3.25.0-GA:compile
+[DEBUG]    org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test
+[DEBUG]       org.opentest4j:opentest4j:jar:1.2.0:test
+[DEBUG]       org.junit.platform:junit-platform-commons:jar:1.9.1:test
+[DEBUG]       org.apiguardian:apiguardian-api:jar:1.1.2:test
+[DEBUG]    org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test
+[DEBUG]       org.junit.platform:junit-platform-engine:jar:1.9.1:test
+[DEBUG]    com.beust:jcommander:jar:1.78:compile
+[DEBUG]    com.google.guava:guava:jar:31.0-jre:compile
+[DEBUG]       com.google.guava:failureaccess:jar:1.0.1:compile
+[DEBUG]       com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[DEBUG]       com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[DEBUG]       org.checkerframework:checker-qual:jar:3.12.0:compile
+[DEBUG]       com.google.errorprone:error_prone_annotations:jar:2.7.1:compile
+[DEBUG]       com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[DEBUG]    com.chemaxon:jchem:jar:16.1.4.0:compile
+[DEBUG]    org.json:json:jar:20220924:compile
+[DEBUG]    commons-lang:commons-lang:jar:2.6:compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ ctsws ---
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for apache.snapshots (http://people.apache.org/repo/m2-snapshot-repository).
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for codehaus.snapshots (http://snapshots.repository.codehaus.org).
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for snapshots (http://snapshots.maven.codehaus.org/maven2).
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for central (http://repo1.maven.org/maven2).
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=286100, ConflictMarker.markTime=132700, ConflictMarker.nodeCount=77, ConflictIdSorter.graphTime=113600, ConflictIdSorter.topsortTime=30200, ConflictIdSorter.conflictIdCount=26, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=882900, ConflictResolver.conflictItemCount=74, DefaultDependencyCollector.collectTime=89228500, DefaultDependencyCollector.transformTime=1518300}
+[DEBUG] org.apache.maven.plugins:maven-resources-plugin:jar:2.6
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-project:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-registry:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-core:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6:compile
+[DEBUG]       org.apache.maven.reporting:maven-reporting-api:jar:2.0.6:compile
+[DEBUG]          org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.0.6:compile
+[DEBUG]       commons-cli:commons-cli:jar:1.0:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.6:compile
+[DEBUG]       org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:compile
+[DEBUG]       classworlds:classworlds:jar:1.1:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-settings:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-model:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-monitor:jar:2.0.6:compile
+[DEBUG]    org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]       junit:junit:jar:3.8.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:2.0.5:compile
+[DEBUG]    org.apache.maven.shared:maven-filtering:jar:1.1:compile
+[DEBUG]       org.sonatype.plexus:plexus-build-api:jar:0.0.4:compile
+[DEBUG]    org.codehaus.plexus:plexus-interpolation:jar:1.13:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-resources-plugin:2.6
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-resources-plugin:2.6
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-resources-plugin:2.6
+[DEBUG]   Included: org.apache.maven.plugins:maven-resources-plugin:jar:2.6
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   Included: org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7
+[DEBUG]   Included: commons-cli:commons-cli:jar:1.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   Included: junit:junit:jar:3.8.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:2.0.5
+[DEBUG]   Included: org.apache.maven.shared:maven-filtering:jar:1.1
+[DEBUG]   Included: org.sonatype.plexus:plexus-build-api:jar:0.0.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.13
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-resources-plugin:2.6:resources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:2.6, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-resources-plugin:2.6:resources' with basic configurator -->
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = D:\ctsws\ctsws\target\classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: ctsws:ctsws:1.0-SNAPSHOT @ D:\ctsws\ctsws\pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: D:\ctsws\ctsws\src\main\resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@2ff95fc6
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used {env.NUMBER_OF_PROCESSORS=16, env.USERPROFILE=C:\Users\KWOLFE, java.specification.version=15, sun.cpu.isalist=amd64, sun.arch.data.model=64, env.PROGRAMW6432=C:\Program Files, java.vendor.url=https://java.oracle.com/, env.OS=Windows_NT, sun.boot.library.path=C:\Program Files\Java\jdk-15.0.2\bin, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -X package, env.SYSTEMROOT=C:\WINDOWS, jdk.debug=release, maven.version=3.8.6, java.specification.vendor=Oracle Corporation, java.version.date=2021-01-19, java.home=C:\Program Files\Java\jdk-15.0.2, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, env.CHOCOLATEYINSTALL=C:\ProgramData\chocolatey, env.LOCALAPPDATA=C:\Users\KWOLFE\AppData\Local, env.USERDOMAIN_ROAMINGPROFILE=AA, user.script=, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=15.0.2+7-27, env.PATH=C:\Program Files\Eclipse Adoptium\jdk-17.0.5.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-8.0.352.8-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files (x86)\Common Files\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Common Files\Pulse Secure\VC142.CRT\X86\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Common Files\Pulse Secure\TNC Client Plugin\;C:\Program Files\dotnet\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\KWOLFE\AppData\Local\Microsoft\WindowsApps;C:\Users\KWOLFE\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\KWOLFE\.dotnet\tools;D:\DotSpatial\Source\bin\Debug\Plugins\DotSpatial.Plugins.SpatiaLite;C:\Users\KWOLFE\.dotnet\tools;C:\Users\KWOLFE\Documents\apache-maven-3.8.6\bin;C:\Users\KWOLFE\AppData\Local\Microsoft\WindowsApps, env.PUBLIC=C:\Users\Public, env.EXEC_DIR=D:\ctsws\ctsws, env.COMMONPROGRAMW6432=C:\Program Files\Common Files, file.encoding=Cp1252, env.COMPUTERNAME=LZ26KWOLFE, env.HOMEPATH=\Users\KWOLFE, env.APPDATA=C:\Users\KWOLFE\AppData\Roaming, java.io.tmpdir=C:\Users\KWOLFE\AppData\Local\Temp\, java.version=15.0.2, env.JAVA_OPTS=-Djna.library.path="c:\swcalculator_home\dll" -DSWCALCULATOR_HOME="c:\swcalculator_home", env.WT_SESSION=e80249ab-59e8-4a62-b580-e7766d8480fc, java.vm.specification.name=Java Virtual Machine Specification, java.library.path=C:\Program Files\Java\jdk-15.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Eclipse Adoptium\jdk-17.0.5.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-8.0.352.8-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files (x86)\Common Files\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Common Files\Pulse Secure\VC142.CRT\X86\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Common Files\Pulse Secure\TNC Client Plugin\;C:\Program Files\dotnet\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\KWOLFE\AppData\Local\Microsoft\WindowsApps;C:\Users\KWOLFE\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\KWOLFE\.dotnet\tools;D:\DotSpatial\Source\bin\Debug\Plugins\DotSpatial.Plugins.SpatiaLite;C:\Users\KWOLFE\.dotnet\tools;C:\Users\KWOLFE\Documents\apache-maven-3.8.6\bin;C:\Users\KWOLFE\AppData\Local\Microsoft\WindowsApps;., java.vendor=Oracle Corporation, env.ERROR_CODE=0, classworlds.conf=C:\Users\KWOLFE\Documents\apache-maven-3.8.6\bin\m2.conf, sun.io.unicode.encoding=UnicodeLittle, java.vm.specification.version=15, os.name=Windows 10, junit.version=5.9.1, env.=EXITCODE=00000000, maven.compiler.source=11, user.home=C:\Users\KWOLFE, env.ONEDRIVECOMMERCIAL=C:\Users\KWOLFE\OneDrive - Environmental Protection Agency (EPA), env.ALLUSERSPROFILE=C:\ProgramData, env.PROJ_LIB=C:\BASINS45\bin\PROJ_NAD, path.separator=;, os.version=10.0, env.CLASSWORLDS_LAUNCHER=org.codehaus.plexus.classworlds.launcher.Launcher, env.PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC, java.vm.name=OpenJDK 64-Bit Server VM, env.USERNAME=KWOLFE, os.arch=amd64, maven.multiModuleProjectDirectory=D:\ctsws\ctsws, env.GDAL_DATA=C:\BASINS45\bin\gdal_data, env.MVN_HOME=C:\Users\KWOLFE\Documents\apache-maven-3.8.6, env.MAVEN_PROJECTBASEDIR=D:\ctsws\ctsws, java.vm.info=mixed mode, sharing, env.TEMP=C:\Users\KWOLFE\AppData\Local\Temp, java.class.version=59.0, env.ONEDRIVE=C:\Users\KWOLFE\OneDrive - Environmental Protection Agency (EPA), env.STTASKFOLDERPATH=Ivanti\PatchSDK\Deployments, sun.jnu.encoding=Cp1252, env.UATDATA=C:\windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77, maven.build.version=Apache Maven 3.8.6 (84538c9988a25aec085021c365c560670ad80f63), maven.home=C:\Users\KWOLFE\Documents\apache-maven-3.8.6, sun.stderr.encoding=cp437, env.JAVA_HOME=C:\Program Files\Java\jdk-15.0.2, env.PROGRAMFILES=C:\Program Files, file.separator=\, java.vm.compressedOopsMode=Zero based, env.CLASSWORLDS_JAR="C:\Users\KWOLFE\Documents\apache-maven-3.8.6\boot\plexus-classworlds-2.6.0.jar", env.EPAONEDRIVE=C:\Users\KWOLFE\OneDrive - Environmental Protection Agency (EPA), line.separator=
+, env.PROMPT=$P$G, env.PROCESSOR_REVISION=8d01, env.PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 141 Stepping 1, GenuineIntel, env.PROGRAMDATA=C:\ProgramData, user.name=KWOLFE, env.WSLENV=WT_SESSION::WT_PROFILE_ID, env.DRIVERDATA=C:\Windows\System32\Drivers\DriverData, env.SYSTEMDRIVE=C:, env.JVMCONFIG=\.mvn\jvm.config, env.PROGRAMFILES(X86)=C:\Program Files (x86), env.WT_PROFILE_ID={0caa0dad-35be-5f56-a8ff-afceeeaa6101}, env.PROCESSOR_LEVEL=6, env.HOMEDRIVE=C:, env.PSMODULEPATH=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules, env.TMP=C:\Users\KWOLFE\AppData\Local\Temp, sun.os.patch.level=, maven.compiler.target=11, env.LOGONSERVER=\\N26265GAYT601, library.jansi.path=C:\Users\KWOLFE\Documents\apache-maven-3.8.6\lib\jansi-native, env.WINDIR=C:\WINDOWS, env.USERDNSDOMAIN=AA.AD.EPA.GOV, java.class.path=C:\Users\KWOLFE\Documents\apache-maven-3.8.6\boot\plexus-classworlds-2.6.0.jar, java.vm.vendor=Oracle Corporation, env.PROCESSOR_ARCHITECTURE=AMD64, user.variant=, env.COMMONPROGRAMFILES=C:\Program Files\Common Files, maven.conf=C:\Users\KWOLFE\Documents\apache-maven-3.8.6/conf, sun.java.launcher=SUN_STANDARD, user.country=US, env.USERDOMAIN=AA, env.COMSPEC=C:\WINDOWS\system32\cmd.exe, sun.cpu.endian=little, user.language=en, env.JAVACMD=C:\Program Files\Java\jdk-15.0.2\bin\java.exe, env.MAVEN_HOME=C:\Users\KWOLFE\Documents\apache-maven-3.8.6, env.WDIR=D:\ctsws\ctsws, env.=C:=C:\Users\KWOLFE, java.runtime.name=OpenJDK Runtime Environment, project.build.sourceEncoding=UTF-8, env.CHOCOLATEYLASTPATHUPDATE=133032390050256073, env.COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files, env.ZES_ENABLE_SYSMAN=1, env.MAVEN_CMD_LINE_ARGS=-X package, java.vendor.url.bug=https://bugreport.java.com/bugreport/, user.dir=D:\ctsws\ctsws, env.=D:=D:\ctsws\ctsws, java.vm.version=15.0.2+7-27}
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[DEBUG] resource with targetPath null
+directory D:\ctsws\ctsws\src\main\resources
+excludes []
+includes []
+[DEBUG] ignoreDelta true
+[INFO] Copying 0 resource
+[DEBUG] no use filter components
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ ctsws ---
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for apache-snapshots (http://people.apache.org/repo/m2-snapshot-repository).
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=293700, ConflictMarker.markTime=108300, ConflictMarker.nodeCount=160, ConflictIdSorter.graphTime=141100, ConflictIdSorter.topsortTime=31100, ConflictIdSorter.conflictIdCount=43, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=962700, ConflictResolver.conflictItemCount=63, DefaultDependencyCollector.collectTime=124263600, DefaultDependencyCollector.transformTime=1578800}
+[DEBUG] org.apache.maven.plugins:maven-compiler-plugin:jar:3.1
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.9:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.9:compile
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.5.1:compile
+[DEBUG]    org.apache.maven:maven-core:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-model:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-project:jar:2.0.9:compile
+[DEBUG]          org.apache.maven:maven-plugin-registry:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-monitor:jar:2.0.9:compile
+[DEBUG]    org.apache.maven:maven-toolchain:jar:1.0:compile
+[DEBUG]    org.apache.maven.shared:maven-shared-utils:jar:0.1:compile
+[DEBUG]       com.google.code.findbugs:jsr305:jar:2.0.1:compile
+[DEBUG]    org.apache.maven.shared:maven-shared-incremental:jar:1.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:compile (version managed from default)
+[DEBUG]    org.codehaus.plexus:plexus-compiler-api:jar:2.2:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-manager:jar:2.2:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-javac:jar:2.2:runtime
+[DEBUG]    org.codehaus.plexus:plexus-container-default:jar:1.5.5:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.2.2:compile
+[DEBUG]       org.apache.xbean:xbean-reflect:jar:3.4:compile
+[DEBUG]          log4j:log4j:jar:1.2.12:compile
+[DEBUG]          commons-logging:commons-logging-api:jar:1.1:compile
+[DEBUG]       com.google.collections:google-collections:jar:1.0:compile
+[DEBUG]       junit:junit:jar:3.8.2:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.1
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.1
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.1
+[DEBUG]   Included: org.apache.maven.plugins:maven-compiler-plugin:jar:3.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:1.5.1
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:0.1
+[DEBUG]   Included: com.google.code.findbugs:jsr305:jar:2.0.1
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-incremental:jar:1.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:1.5.5
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-api:jar:2.2
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-manager:jar:2.2
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-javac:jar:2.2
+[DEBUG]   Included: org.apache.xbean:xbean-reflect:jar:3.4
+[DEBUG]   Included: log4j:log4j:jar:1.2.12
+[DEBUG]   Included: commons-logging:commons-logging-api:jar:1.1
+[DEBUG]   Included: com.google.collections:google-collections:jar:1.0
+[DEBUG]   Included: junit:junit:jar:3.8.2
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-compiler-plugin:3.1:compile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.1, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-compiler-plugin:3.1:compile' with basic configurator -->
+[DEBUG]   (f) basedir = D:\ctsws\ctsws
+[DEBUG]   (f) buildDirectory = D:\ctsws\ctsws\target
+[DEBUG]   (f) classpathElements = [D:\ctsws\ctsws\target\classes, C:\Users\KWOLFE\.m2\repository\jakarta\servlet\jakarta.servlet-api\5.0.0\jakarta.servlet-api-5.0.0.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\containers\jersey-container-servlet\3.0.4\jersey-container-servlet-3.0.4.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\containers\jersey-container-servlet-core\3.0.4\jersey-container-servlet-core-3.0.4.jar, C:\Users\KWOLFE\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.0\jakarta.inject-api-2.0.0.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\core\jersey-common\3.0.4\jersey-common-3.0.4.jar, C:\Users\KWOLFE\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.0.0\jakarta.annotation-api-2.0.0.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\hk2\osgi-resource-locator\1.0.3\osgi-resource-locator-1.0.3.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\core\jersey-server\3.0.4\jersey-server-3.0.4.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\core\jersey-client\3.0.4\jersey-client-3.0.4.jar, C:\Users\KWOLFE\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.0\jakarta.validation-api-3.0.0.jar, C:\Users\KWOLFE\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\3.0.0\jakarta.ws.rs-api-3.0.0.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\media\jersey-media-json-jackson\3.0.4\jersey-media-json-jackson-3.0.4.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\ext\jersey-entity-filtering\3.0.4\jersey-entity-filtering-3.0.4.jar, C:\Users\KWOLFE\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.0\jackson-annotations-2.13.0.jar, C:\Users\KWOLFE\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.0\jackson-databind-2.13.0.jar, C:\Users\KWOLFE\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.0\jackson-core-2.13.0.jar, C:\Users\KWOLFE\.m2\repository\com\fasterxml\jackson\module\jackson-module-jakarta-xmlbind-annotations\2.13.0\jackson-module-jakarta-xmlbind-annotations-2.13.0.jar, C:\Users\KWOLFE\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\3.0.1\jakarta.xml.bind-api-3.0.1.jar, C:\Users\KWOLFE\.m2\repository\com\sun\activation\jakarta.activation\2.0.1\jakarta.activation-2.0.1.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\inject\jersey-hk2\3.0.4\jersey-hk2-3.0.4.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\hk2\hk2-locator\3.0.1\hk2-locator-3.0.1.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\hk2\external\aopalliance-repackaged\3.0.1\aopalliance-repackaged-3.0.1.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\hk2\hk2-api\3.0.1\hk2-api-3.0.1.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\hk2\hk2-utils\3.0.1\hk2-utils-3.0.1.jar, C:\Users\KWOLFE\.m2\repository\org\javassist\javassist\3.25.0-GA\javassist-3.25.0-GA.jar, C:\Users\KWOLFE\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar, C:\Users\KWOLFE\.m2\repository\com\google\guava\guava\31.0-jre\guava-31.0-jre.jar, C:\Users\KWOLFE\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar, C:\Users\KWOLFE\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar, C:\Users\KWOLFE\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar, C:\Users\KWOLFE\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar, C:\Users\KWOLFE\.m2\repository\com\google\errorprone\error_prone_annotations\2.7.1\error_prone_annotations-2.7.1.jar, C:\Users\KWOLFE\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar, C:\Users\KWOLFE\.m2\repository\com\chemaxon\jchem\16.1.4.0\jchem-16.1.4.0.jar, C:\Users\KWOLFE\.m2\repository\org\json\json\20220924\json-20220924.jar, C:\Users\KWOLFE\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar]
+[DEBUG]   (f) compileSourceRoots = [D:\ctsws\ctsws\src\main\java]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) forceJavacCompilerUse = false
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedSourcesDirectory = D:\ctsws\ctsws\target\generated-sources\annotations
+[DEBUG]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.1:compile {execution: default-compile}
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = D:\ctsws\ctsws\target\classes
+[DEBUG]   (f) projectArtifact = ctsws:ctsws:war:1.0-SNAPSHOT
+[DEBUG]   (f) showDeprecation = false
+[DEBUG]   (f) showWarnings = false
+[DEBUG]   (f) skipMultiThreadWarning = false
+[DEBUG]   (f) source = 11
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (f) target = 11
+[DEBUG]   (f) useIncrementalCompilation = true
+[DEBUG]   (f) verbose = false
+[DEBUG]   (f) mavenSession = org.apache.maven.execution.MavenSession@2ff95fc6
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@2ff95fc6
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Source directories: [D:\ctsws\ctsws\src\main\java]
+[DEBUG] Classpath: [D:\ctsws\ctsws\target\classes
+ C:\Users\KWOLFE\.m2\repository\jakarta\servlet\jakarta.servlet-api\5.0.0\jakarta.servlet-api-5.0.0.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\containers\jersey-container-servlet\3.0.4\jersey-container-servlet-3.0.4.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\containers\jersey-container-servlet-core\3.0.4\jersey-container-servlet-core-3.0.4.jar
+ C:\Users\KWOLFE\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.0\jakarta.inject-api-2.0.0.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\core\jersey-common\3.0.4\jersey-common-3.0.4.jar
+ C:\Users\KWOLFE\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.0.0\jakarta.annotation-api-2.0.0.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\hk2\osgi-resource-locator\1.0.3\osgi-resource-locator-1.0.3.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\core\jersey-server\3.0.4\jersey-server-3.0.4.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\core\jersey-client\3.0.4\jersey-client-3.0.4.jar
+ C:\Users\KWOLFE\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.0\jakarta.validation-api-3.0.0.jar
+ C:\Users\KWOLFE\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\3.0.0\jakarta.ws.rs-api-3.0.0.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\media\jersey-media-json-jackson\3.0.4\jersey-media-json-jackson-3.0.4.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\ext\jersey-entity-filtering\3.0.4\jersey-entity-filtering-3.0.4.jar
+ C:\Users\KWOLFE\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.0\jackson-annotations-2.13.0.jar
+ C:\Users\KWOLFE\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.0\jackson-databind-2.13.0.jar
+ C:\Users\KWOLFE\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.0\jackson-core-2.13.0.jar
+ C:\Users\KWOLFE\.m2\repository\com\fasterxml\jackson\module\jackson-module-jakarta-xmlbind-annotations\2.13.0\jackson-module-jakarta-xmlbind-annotations-2.13.0.jar
+ C:\Users\KWOLFE\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\3.0.1\jakarta.xml.bind-api-3.0.1.jar
+ C:\Users\KWOLFE\.m2\repository\com\sun\activation\jakarta.activation\2.0.1\jakarta.activation-2.0.1.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\inject\jersey-hk2\3.0.4\jersey-hk2-3.0.4.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\hk2\hk2-locator\3.0.1\hk2-locator-3.0.1.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\hk2\external\aopalliance-repackaged\3.0.1\aopalliance-repackaged-3.0.1.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\hk2\hk2-api\3.0.1\hk2-api-3.0.1.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\hk2\hk2-utils\3.0.1\hk2-utils-3.0.1.jar
+ C:\Users\KWOLFE\.m2\repository\org\javassist\javassist\3.25.0-GA\javassist-3.25.0-GA.jar
+ C:\Users\KWOLFE\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar
+ C:\Users\KWOLFE\.m2\repository\com\google\guava\guava\31.0-jre\guava-31.0-jre.jar
+ C:\Users\KWOLFE\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar
+ C:\Users\KWOLFE\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+ C:\Users\KWOLFE\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar
+ C:\Users\KWOLFE\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar
+ C:\Users\KWOLFE\.m2\repository\com\google\errorprone\error_prone_annotations\2.7.1\error_prone_annotations-2.7.1.jar
+ C:\Users\KWOLFE\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar
+ C:\Users\KWOLFE\.m2\repository\com\chemaxon\jchem\16.1.4.0\jchem-16.1.4.0.jar
+ C:\Users\KWOLFE\.m2\repository\org\json\json\20220924\json-20220924.jar
+ C:\Users\KWOLFE\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar]
+[DEBUG] Output directory: D:\ctsws\ctsws\target\classes
+[DEBUG] CompilerReuseStrategy: reuseCreated
+[DEBUG] useIncrementalCompilation enabled
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ ctsws ---
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-resources-plugin:2.6:testResources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:2.6, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-resources-plugin:2.6:testResources' with basic configurator -->
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = D:\ctsws\ctsws\target\test-classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: ctsws:ctsws:1.0-SNAPSHOT @ D:\ctsws\ctsws\pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: D:\ctsws\ctsws\src\test\resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@2ff95fc6
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used {env.NUMBER_OF_PROCESSORS=16, env.USERPROFILE=C:\Users\KWOLFE, java.specification.version=15, sun.cpu.isalist=amd64, sun.arch.data.model=64, env.PROGRAMW6432=C:\Program Files, java.vendor.url=https://java.oracle.com/, env.OS=Windows_NT, sun.boot.library.path=C:\Program Files\Java\jdk-15.0.2\bin, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -X package, env.SYSTEMROOT=C:\WINDOWS, jdk.debug=release, maven.version=3.8.6, java.specification.vendor=Oracle Corporation, java.version.date=2021-01-19, java.home=C:\Program Files\Java\jdk-15.0.2, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, env.CHOCOLATEYINSTALL=C:\ProgramData\chocolatey, env.LOCALAPPDATA=C:\Users\KWOLFE\AppData\Local, env.USERDOMAIN_ROAMINGPROFILE=AA, user.script=, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=15.0.2+7-27, env.PATH=C:\Program Files\Eclipse Adoptium\jdk-17.0.5.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-8.0.352.8-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files (x86)\Common Files\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Common Files\Pulse Secure\VC142.CRT\X86\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Common Files\Pulse Secure\TNC Client Plugin\;C:\Program Files\dotnet\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\KWOLFE\AppData\Local\Microsoft\WindowsApps;C:\Users\KWOLFE\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\KWOLFE\.dotnet\tools;D:\DotSpatial\Source\bin\Debug\Plugins\DotSpatial.Plugins.SpatiaLite;C:\Users\KWOLFE\.dotnet\tools;C:\Users\KWOLFE\Documents\apache-maven-3.8.6\bin;C:\Users\KWOLFE\AppData\Local\Microsoft\WindowsApps, env.PUBLIC=C:\Users\Public, env.EXEC_DIR=D:\ctsws\ctsws, env.COMMONPROGRAMW6432=C:\Program Files\Common Files, file.encoding=Cp1252, env.COMPUTERNAME=LZ26KWOLFE, env.HOMEPATH=\Users\KWOLFE, env.APPDATA=C:\Users\KWOLFE\AppData\Roaming, java.io.tmpdir=C:\Users\KWOLFE\AppData\Local\Temp\, java.version=15.0.2, env.JAVA_OPTS=-Djna.library.path="c:\swcalculator_home\dll" -DSWCALCULATOR_HOME="c:\swcalculator_home", env.WT_SESSION=e80249ab-59e8-4a62-b580-e7766d8480fc, java.vm.specification.name=Java Virtual Machine Specification, java.library.path=C:\Program Files\Java\jdk-15.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Eclipse Adoptium\jdk-17.0.5.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-8.0.352.8-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files (x86)\Common Files\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Common Files\Pulse Secure\VC142.CRT\X86\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Common Files\Pulse Secure\TNC Client Plugin\;C:\Program Files\dotnet\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\KWOLFE\AppData\Local\Microsoft\WindowsApps;C:\Users\KWOLFE\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\KWOLFE\.dotnet\tools;D:\DotSpatial\Source\bin\Debug\Plugins\DotSpatial.Plugins.SpatiaLite;C:\Users\KWOLFE\.dotnet\tools;C:\Users\KWOLFE\Documents\apache-maven-3.8.6\bin;C:\Users\KWOLFE\AppData\Local\Microsoft\WindowsApps;., java.vendor=Oracle Corporation, env.ERROR_CODE=0, classworlds.conf=C:\Users\KWOLFE\Documents\apache-maven-3.8.6\bin\m2.conf, sun.io.unicode.encoding=UnicodeLittle, java.vm.specification.version=15, os.name=Windows 10, junit.version=5.9.1, env.=EXITCODE=00000000, maven.compiler.source=11, user.home=C:\Users\KWOLFE, env.ONEDRIVECOMMERCIAL=C:\Users\KWOLFE\OneDrive - Environmental Protection Agency (EPA), env.ALLUSERSPROFILE=C:\ProgramData, env.PROJ_LIB=C:\BASINS45\bin\PROJ_NAD, path.separator=;, os.version=10.0, env.CLASSWORLDS_LAUNCHER=org.codehaus.plexus.classworlds.launcher.Launcher, env.PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC, java.vm.name=OpenJDK 64-Bit Server VM, env.USERNAME=KWOLFE, os.arch=amd64, maven.multiModuleProjectDirectory=D:\ctsws\ctsws, env.GDAL_DATA=C:\BASINS45\bin\gdal_data, env.MVN_HOME=C:\Users\KWOLFE\Documents\apache-maven-3.8.6, env.MAVEN_PROJECTBASEDIR=D:\ctsws\ctsws, java.vm.info=mixed mode, sharing, env.TEMP=C:\Users\KWOLFE\AppData\Local\Temp, java.class.version=59.0, env.ONEDRIVE=C:\Users\KWOLFE\OneDrive - Environmental Protection Agency (EPA), env.STTASKFOLDERPATH=Ivanti\PatchSDK\Deployments, sun.jnu.encoding=Cp1252, env.UATDATA=C:\windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77, maven.build.version=Apache Maven 3.8.6 (84538c9988a25aec085021c365c560670ad80f63), maven.home=C:\Users\KWOLFE\Documents\apache-maven-3.8.6, sun.stderr.encoding=cp437, env.JAVA_HOME=C:\Program Files\Java\jdk-15.0.2, env.PROGRAMFILES=C:\Program Files, file.separator=\, java.vm.compressedOopsMode=Zero based, env.CLASSWORLDS_JAR="C:\Users\KWOLFE\Documents\apache-maven-3.8.6\boot\plexus-classworlds-2.6.0.jar", env.EPAONEDRIVE=C:\Users\KWOLFE\OneDrive - Environmental Protection Agency (EPA), line.separator=
+, env.PROMPT=$P$G, env.PROCESSOR_REVISION=8d01, env.PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 141 Stepping 1, GenuineIntel, env.PROGRAMDATA=C:\ProgramData, user.name=KWOLFE, env.WSLENV=WT_SESSION::WT_PROFILE_ID, env.DRIVERDATA=C:\Windows\System32\Drivers\DriverData, env.SYSTEMDRIVE=C:, env.JVMCONFIG=\.mvn\jvm.config, env.PROGRAMFILES(X86)=C:\Program Files (x86), env.WT_PROFILE_ID={0caa0dad-35be-5f56-a8ff-afceeeaa6101}, env.PROCESSOR_LEVEL=6, env.HOMEDRIVE=C:, env.PSMODULEPATH=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules, env.TMP=C:\Users\KWOLFE\AppData\Local\Temp, sun.os.patch.level=, maven.compiler.target=11, env.LOGONSERVER=\\N26265GAYT601, library.jansi.path=C:\Users\KWOLFE\Documents\apache-maven-3.8.6\lib\jansi-native, env.WINDIR=C:\WINDOWS, env.USERDNSDOMAIN=AA.AD.EPA.GOV, java.class.path=C:\Users\KWOLFE\Documents\apache-maven-3.8.6\boot\plexus-classworlds-2.6.0.jar, java.vm.vendor=Oracle Corporation, env.PROCESSOR_ARCHITECTURE=AMD64, user.variant=, env.COMMONPROGRAMFILES=C:\Program Files\Common Files, maven.conf=C:\Users\KWOLFE\Documents\apache-maven-3.8.6/conf, sun.java.launcher=SUN_STANDARD, user.country=US, env.USERDOMAIN=AA, env.COMSPEC=C:\WINDOWS\system32\cmd.exe, sun.cpu.endian=little, user.language=en, env.JAVACMD=C:\Program Files\Java\jdk-15.0.2\bin\java.exe, env.MAVEN_HOME=C:\Users\KWOLFE\Documents\apache-maven-3.8.6, env.WDIR=D:\ctsws\ctsws, env.=C:=C:\Users\KWOLFE, java.runtime.name=OpenJDK Runtime Environment, project.build.sourceEncoding=UTF-8, env.CHOCOLATEYLASTPATHUPDATE=133032390050256073, env.COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files, env.ZES_ENABLE_SYSMAN=1, env.MAVEN_CMD_LINE_ARGS=-X package, java.vendor.url.bug=https://bugreport.java.com/bugreport/, user.dir=D:\ctsws\ctsws, env.=D:=D:\ctsws\ctsws, java.vm.version=15.0.2+7-27}
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[DEBUG] resource with targetPath null
+directory D:\ctsws\ctsws\src\test\resources
+excludes []
+includes []
+[DEBUG] ignoreDelta true
+[INFO] Copying 0 resource
+[DEBUG] no use filter components
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ ctsws ---
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.1, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile' with basic configurator -->
+[DEBUG]   (f) basedir = D:\ctsws\ctsws
+[DEBUG]   (f) buildDirectory = D:\ctsws\ctsws\target
+[DEBUG]   (f) classpathElements = [D:\ctsws\ctsws\target\test-classes, D:\ctsws\ctsws\target\classes, C:\Users\KWOLFE\.m2\repository\jakarta\servlet\jakarta.servlet-api\5.0.0\jakarta.servlet-api-5.0.0.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\containers\jersey-container-servlet\3.0.4\jersey-container-servlet-3.0.4.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\containers\jersey-container-servlet-core\3.0.4\jersey-container-servlet-core-3.0.4.jar, C:\Users\KWOLFE\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.0\jakarta.inject-api-2.0.0.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\core\jersey-common\3.0.4\jersey-common-3.0.4.jar, C:\Users\KWOLFE\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.0.0\jakarta.annotation-api-2.0.0.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\hk2\osgi-resource-locator\1.0.3\osgi-resource-locator-1.0.3.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\core\jersey-server\3.0.4\jersey-server-3.0.4.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\core\jersey-client\3.0.4\jersey-client-3.0.4.jar, C:\Users\KWOLFE\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.0\jakarta.validation-api-3.0.0.jar, C:\Users\KWOLFE\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\3.0.0\jakarta.ws.rs-api-3.0.0.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\media\jersey-media-json-jackson\3.0.4\jersey-media-json-jackson-3.0.4.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\ext\jersey-entity-filtering\3.0.4\jersey-entity-filtering-3.0.4.jar, C:\Users\KWOLFE\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.0\jackson-annotations-2.13.0.jar, C:\Users\KWOLFE\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.0\jackson-databind-2.13.0.jar, C:\Users\KWOLFE\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.0\jackson-core-2.13.0.jar, C:\Users\KWOLFE\.m2\repository\com\fasterxml\jackson\module\jackson-module-jakarta-xmlbind-annotations\2.13.0\jackson-module-jakarta-xmlbind-annotations-2.13.0.jar, C:\Users\KWOLFE\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\3.0.1\jakarta.xml.bind-api-3.0.1.jar, C:\Users\KWOLFE\.m2\repository\com\sun\activation\jakarta.activation\2.0.1\jakarta.activation-2.0.1.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\inject\jersey-hk2\3.0.4\jersey-hk2-3.0.4.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\hk2\hk2-locator\3.0.1\hk2-locator-3.0.1.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\hk2\external\aopalliance-repackaged\3.0.1\aopalliance-repackaged-3.0.1.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\hk2\hk2-api\3.0.1\hk2-api-3.0.1.jar, C:\Users\KWOLFE\.m2\repository\org\glassfish\hk2\hk2-utils\3.0.1\hk2-utils-3.0.1.jar, C:\Users\KWOLFE\.m2\repository\org\javassist\javassist\3.25.0-GA\javassist-3.25.0-GA.jar, C:\Users\KWOLFE\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.1\junit-jupiter-api-5.9.1.jar, C:\Users\KWOLFE\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar, C:\Users\KWOLFE\.m2\repository\org\junit\platform\junit-platform-commons\1.9.1\junit-platform-commons-1.9.1.jar, C:\Users\KWOLFE\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar, C:\Users\KWOLFE\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.1\junit-jupiter-engine-5.9.1.jar, C:\Users\KWOLFE\.m2\repository\org\junit\platform\junit-platform-engine\1.9.1\junit-platform-engine-1.9.1.jar, C:\Users\KWOLFE\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar, C:\Users\KWOLFE\.m2\repository\com\google\guava\guava\31.0-jre\guava-31.0-jre.jar, C:\Users\KWOLFE\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar, C:\Users\KWOLFE\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar, C:\Users\KWOLFE\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar, C:\Users\KWOLFE\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar, C:\Users\KWOLFE\.m2\repository\com\google\errorprone\error_prone_annotations\2.7.1\error_prone_annotations-2.7.1.jar, C:\Users\KWOLFE\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar, C:\Users\KWOLFE\.m2\repository\com\chemaxon\jchem\16.1.4.0\jchem-16.1.4.0.jar, C:\Users\KWOLFE\.m2\repository\org\json\json\20220924\json-20220924.jar, C:\Users\KWOLFE\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar]
+[DEBUG]   (f) compileSourceRoots = [D:\ctsws\ctsws\src\test\java]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) forceJavacCompilerUse = false
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedTestSourcesDirectory = D:\ctsws\ctsws\target\generated-test-sources\test-annotations
+[DEBUG]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile {execution: default-testCompile}
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = D:\ctsws\ctsws\target\test-classes
+[DEBUG]   (f) showDeprecation = false
+[DEBUG]   (f) showWarnings = false
+[DEBUG]   (f) skipMultiThreadWarning = false
+[DEBUG]   (f) source = 11
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (f) target = 11
+[DEBUG]   (f) useIncrementalCompilation = true
+[DEBUG]   (f) verbose = false
+[DEBUG]   (f) mavenSession = org.apache.maven.execution.MavenSession@2ff95fc6
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@2ff95fc6
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Source directories: [D:\ctsws\ctsws\src\test\java]
+[DEBUG] Classpath: [D:\ctsws\ctsws\target\test-classes
+ D:\ctsws\ctsws\target\classes
+ C:\Users\KWOLFE\.m2\repository\jakarta\servlet\jakarta.servlet-api\5.0.0\jakarta.servlet-api-5.0.0.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\containers\jersey-container-servlet\3.0.4\jersey-container-servlet-3.0.4.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\containers\jersey-container-servlet-core\3.0.4\jersey-container-servlet-core-3.0.4.jar
+ C:\Users\KWOLFE\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.0\jakarta.inject-api-2.0.0.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\core\jersey-common\3.0.4\jersey-common-3.0.4.jar
+ C:\Users\KWOLFE\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.0.0\jakarta.annotation-api-2.0.0.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\hk2\osgi-resource-locator\1.0.3\osgi-resource-locator-1.0.3.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\core\jersey-server\3.0.4\jersey-server-3.0.4.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\core\jersey-client\3.0.4\jersey-client-3.0.4.jar
+ C:\Users\KWOLFE\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.0\jakarta.validation-api-3.0.0.jar
+ C:\Users\KWOLFE\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\3.0.0\jakarta.ws.rs-api-3.0.0.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\media\jersey-media-json-jackson\3.0.4\jersey-media-json-jackson-3.0.4.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\ext\jersey-entity-filtering\3.0.4\jersey-entity-filtering-3.0.4.jar
+ C:\Users\KWOLFE\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.0\jackson-annotations-2.13.0.jar
+ C:\Users\KWOLFE\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.0\jackson-databind-2.13.0.jar
+ C:\Users\KWOLFE\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.0\jackson-core-2.13.0.jar
+ C:\Users\KWOLFE\.m2\repository\com\fasterxml\jackson\module\jackson-module-jakarta-xmlbind-annotations\2.13.0\jackson-module-jakarta-xmlbind-annotations-2.13.0.jar
+ C:\Users\KWOLFE\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\3.0.1\jakarta.xml.bind-api-3.0.1.jar
+ C:\Users\KWOLFE\.m2\repository\com\sun\activation\jakarta.activation\2.0.1\jakarta.activation-2.0.1.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\jersey\inject\jersey-hk2\3.0.4\jersey-hk2-3.0.4.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\hk2\hk2-locator\3.0.1\hk2-locator-3.0.1.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\hk2\external\aopalliance-repackaged\3.0.1\aopalliance-repackaged-3.0.1.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\hk2\hk2-api\3.0.1\hk2-api-3.0.1.jar
+ C:\Users\KWOLFE\.m2\repository\org\glassfish\hk2\hk2-utils\3.0.1\hk2-utils-3.0.1.jar
+ C:\Users\KWOLFE\.m2\repository\org\javassist\javassist\3.25.0-GA\javassist-3.25.0-GA.jar
+ C:\Users\KWOLFE\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.1\junit-jupiter-api-5.9.1.jar
+ C:\Users\KWOLFE\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar
+ C:\Users\KWOLFE\.m2\repository\org\junit\platform\junit-platform-commons\1.9.1\junit-platform-commons-1.9.1.jar
+ C:\Users\KWOLFE\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar
+ C:\Users\KWOLFE\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.1\junit-jupiter-engine-5.9.1.jar
+ C:\Users\KWOLFE\.m2\repository\org\junit\platform\junit-platform-engine\1.9.1\junit-platform-engine-1.9.1.jar
+ C:\Users\KWOLFE\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar
+ C:\Users\KWOLFE\.m2\repository\com\google\guava\guava\31.0-jre\guava-31.0-jre.jar
+ C:\Users\KWOLFE\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar
+ C:\Users\KWOLFE\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+ C:\Users\KWOLFE\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar
+ C:\Users\KWOLFE\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar
+ C:\Users\KWOLFE\.m2\repository\com\google\errorprone\error_prone_annotations\2.7.1\error_prone_annotations-2.7.1.jar
+ C:\Users\KWOLFE\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar
+ C:\Users\KWOLFE\.m2\repository\com\chemaxon\jchem\16.1.4.0\jchem-16.1.4.0.jar
+ C:\Users\KWOLFE\.m2\repository\org\json\json\20220924\json-20220924.jar
+ C:\Users\KWOLFE\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar]
+[DEBUG] Output directory: D:\ctsws\ctsws\target\test-classes
+[DEBUG] CompilerReuseStrategy: reuseCreated
+[DEBUG] useIncrementalCompilation enabled
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ ctsws ---
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=166300, ConflictMarker.markTime=43800, ConflictMarker.nodeCount=132, ConflictIdSorter.graphTime=56200, ConflictIdSorter.topsortTime=17700, ConflictIdSorter.conflictIdCount=27, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=514000, ConflictResolver.conflictItemCount=77, DefaultDependencyCollector.collectTime=27324600, DefaultDependencyCollector.transformTime=817700}
+[DEBUG] org.apache.maven.plugins:maven-surefire-plugin:jar:2.12.4
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.9:compile
+[DEBUG]    org.apache.maven.surefire:surefire-booter:jar:2.12.4:compile
+[DEBUG]       org.apache.maven.surefire:surefire-api:jar:2.12.4:compile (version managed from default)
+[DEBUG]    org.apache.maven.surefire:maven-surefire-common:jar:2.12.4:compile
+[DEBUG]       org.apache.commons:commons-lang3:jar:3.1:compile (version managed from default)
+[DEBUG]       org.apache.maven.shared:maven-common-artifact-filters:jar:1.3:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0.8:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.9:compile
+[DEBUG]    org.apache.maven:maven-project:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-model:jar:2.0.9:compile (version managed from default)
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-plugin-registry:jar:2.0.9:compile
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]          junit:junit:jar:3.8.1:test (scope managed from default) (version managed from default)
+[DEBUG]    org.apache.maven:maven-core:jar:2.0.9:compile (exclusions managed from default)
+[DEBUG]       org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.9:compile
+[DEBUG]       org.apache.maven.reporting:maven-reporting-api:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-monitor:jar:2.0.9:compile
+[DEBUG]       classworlds:classworlds:jar:1.1:compile
+[DEBUG]    org.apache.maven:maven-toolchain:jar:2.0.9:compile
+[DEBUG]    org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.1:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-surefire-plugin:2.12.4
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-surefire-plugin:2.12.4
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-surefire-plugin:2.12.4
+[DEBUG]   Included: org.apache.maven.plugins:maven-surefire-plugin:jar:2.12.4
+[DEBUG]   Included: org.apache.maven.surefire:surefire-booter:jar:2.12.4
+[DEBUG]   Included: org.apache.maven.surefire:surefire-api:jar:2.12.4
+[DEBUG]   Included: org.apache.maven.surefire:maven-surefire-common:jar:2.12.4
+[DEBUG]   Included: org.apache.commons:commons-lang3:jar:3.1
+[DEBUG]   Included: org.apache.maven.shared:maven-common-artifact-filters:jar:1.3
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.8
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:2.0.9
+[DEBUG]   Included: org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.1
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-surefire-plugin:2.12.4, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test' with basic configurator -->
+[DEBUG]   (s) basedir = D:\ctsws\ctsws
+[DEBUG]   (s) childDelegation = false
+[DEBUG]   (s) classesDirectory = D:\ctsws\ctsws\target\classes
+[DEBUG]   (s) disableXmlReport = false
+[DEBUG]   (s) enableAssertions = true
+[DEBUG]   (s) forkMode = once
+[DEBUG]   (s) junitArtifactName = junit:junit
+[DEBUG]   (s) localRepository =       id: local
+      url: file:///C:/Users/KWOLFE/.m2/repository/
+   layout: default
+snapshots: [enabled => true, update => always]
+ releases: [enabled => true, update => always]
+   blocked: false
+
+[DEBUG]   (f) parallelMavenExecution = false
+[DEBUG]   (s) perCoreThreadCount = true
+[DEBUG]   (s) pluginArtifactMap = {org.apache.maven.plugins:maven-surefire-plugin=org.apache.maven.plugins:maven-surefire-plugin:maven-plugin:2.12.4:, org.apache.maven:maven-plugin-api=org.apache.maven:maven-plugin-api:jar:2.0.9:compile, org.apache.maven.surefire:surefire-booter=org.apache.maven.surefire:surefire-booter:jar:2.12.4:compile, org.apache.maven.surefire:surefire-api=org.apache.maven.surefire:surefire-api:jar:2.12.4:compile, org.apache.maven.surefire:maven-surefire-common=org.apache.maven.surefire:maven-surefire-common:jar:2.12.4:compile, org.apache.commons:commons-lang3=org.apache.commons:commons-lang3:jar:3.1:compile, org.apache.maven.shared:maven-common-artifact-filters=org.apache.maven.shared:maven-common-artifact-filters:jar:1.3:compile, org.codehaus.plexus:plexus-utils=org.codehaus.plexus:plexus-utils:jar:3.0.8:compile, org.apache.maven:maven-artifact=org.apache.maven:maven-artifact:jar:2.0.9:compile, org.apache.maven:maven-project=org.apache.maven:maven-project:jar:2.0.9:compile, org.apache.maven:maven-settings=org.apache.maven:maven-settings:jar:2.0.9:compile, org.apache.maven:maven-profile=org.apache.maven:maven-profile:jar:2.0.9:compile, org.apache.maven:maven-model=org.apache.maven:maven-model:jar:2.0.9:compile, org.apache.maven:maven-artifact-manager=org.apache.maven:maven-artifact-manager:jar:2.0.9:compile, org.apache.maven:maven-plugin-registry=org.apache.maven:maven-plugin-registry:jar:2.0.9:compile, org.codehaus.plexus:plexus-container-default=org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile, org.apache.maven:maven-core=org.apache.maven:maven-core:jar:2.0.9:compile, org.apache.maven:maven-plugin-parameter-documenter=org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.9:compile, org.apache.maven.reporting:maven-reporting-api=org.apache.maven.reporting:maven-reporting-api:jar:2.0.9:compile, org.apache.maven:maven-repository-metadata=org.apache.maven:maven-repository-metadata:jar:2.0.9:compile, org.apache.maven:maven-error-diagnostics=org.apache.maven:maven-error-diagnostics:jar:2.0.9:compile, org.apache.maven:maven-plugin-descriptor=org.apache.maven:maven-plugin-descriptor:jar:2.0.9:compile, org.apache.maven:maven-monitor=org.apache.maven:maven-monitor:jar:2.0.9:compile, classworlds:classworlds=classworlds:classworlds:jar:1.1:compile, org.apache.maven:maven-toolchain=org.apache.maven:maven-toolchain:jar:2.0.9:compile, org.apache.maven.plugin-tools:maven-plugin-annotations=org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.1:compile}
+[DEBUG]   (f) pluginDescriptor = Component Descriptor: role: 'org.apache.maven.plugin.Mojo', implementation: 'org.apache.maven.plugin.surefire.HelpMojo', role hint: 'org.apache.maven.plugins:maven-surefire-plugin:2.12.4:help'
+role: 'org.apache.maven.plugin.Mojo', implementation: 'org.apache.maven.plugin.surefire.SurefirePlugin', role hint: 'org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test'
+---
+[DEBUG]   (s) printSummary = true
+[DEBUG]   (s) projectArtifactMap = {jakarta.servlet:jakarta.servlet-api=jakarta.servlet:jakarta.servlet-api:jar:5.0.0:provided, org.glassfish.jersey.containers:jersey-container-servlet=org.glassfish.jersey.containers:jersey-container-servlet:jar:3.0.4:compile, org.glassfish.jersey.containers:jersey-container-servlet-core=org.glassfish.jersey.containers:jersey-container-servlet-core:jar:3.0.4:compile, jakarta.inject:jakarta.inject-api=jakarta.inject:jakarta.inject-api:jar:2.0.0:compile, org.glassfish.jersey.core:jersey-common=org.glassfish.jersey.core:jersey-common:jar:3.0.4:compile, jakarta.annotation:jakarta.annotation-api=jakarta.annotation:jakarta.annotation-api:jar:2.0.0:compile, org.glassfish.hk2:osgi-resource-locator=org.glassfish.hk2:osgi-resource-locator:jar:1.0.3:compile, org.glassfish.jersey.core:jersey-server=org.glassfish.jersey.core:jersey-server:jar:3.0.4:compile, org.glassfish.jersey.core:jersey-client=org.glassfish.jersey.core:jersey-client:jar:3.0.4:compile, jakarta.validation:jakarta.validation-api=jakarta.validation:jakarta.validation-api:jar:3.0.0:compile, jakarta.ws.rs:jakarta.ws.rs-api=jakarta.ws.rs:jakarta.ws.rs-api:jar:3.0.0:compile, org.glassfish.jersey.media:jersey-media-json-jackson=org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.0.4:compile, org.glassfish.jersey.ext:jersey-entity-filtering=org.glassfish.jersey.ext:jersey-entity-filtering:jar:3.0.4:compile, com.fasterxml.jackson.core:jackson-annotations=com.fasterxml.jackson.core:jackson-annotations:jar:2.13.0:compile, com.fasterxml.jackson.core:jackson-databind=com.fasterxml.jackson.core:jackson-databind:jar:2.13.0:compile, com.fasterxml.jackson.core:jackson-core=com.fasterxml.jackson.core:jackson-core:jar:2.13.0:compile, com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations=com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations:jar:2.13.0:compile, jakarta.xml.bind:jakarta.xml.bind-api=jakarta.xml.bind:jakarta.xml.bind-api:jar:3.0.1:compile, com.sun.activation:jakarta.activation=com.sun.activation:jakarta.activation:jar:2.0.1:compile, org.glassfish.jersey.inject:jersey-hk2=org.glassfish.jersey.inject:jersey-hk2:jar:3.0.4:compile, org.glassfish.hk2:hk2-locator=org.glassfish.hk2:hk2-locator:jar:3.0.1:compile, org.glassfish.hk2.external:aopalliance-repackaged=org.glassfish.hk2.external:aopalliance-repackaged:jar:3.0.1:compile, org.glassfish.hk2:hk2-api=org.glassfish.hk2:hk2-api:jar:3.0.1:compile, org.glassfish.hk2:hk2-utils=org.glassfish.hk2:hk2-utils:jar:3.0.1:compile, org.javassist:javassist=org.javassist:javassist:jar:3.25.0-GA:compile, org.junit.jupiter:junit-jupiter-api=org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test, org.opentest4j:opentest4j=org.opentest4j:opentest4j:jar:1.2.0:test, org.junit.platform:junit-platform-commons=org.junit.platform:junit-platform-commons:jar:1.9.1:test, org.apiguardian:apiguardian-api=org.apiguardian:apiguardian-api:jar:1.1.2:test, org.junit.jupiter:junit-jupiter-engine=org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test, org.junit.platform:junit-platform-engine=org.junit.platform:junit-platform-engine:jar:1.9.1:test, com.beust:jcommander=com.beust:jcommander:jar:1.78:compile, com.google.guava:guava=com.google.guava:guava:jar:31.0-jre:compile, com.google.guava:failureaccess=com.google.guava:failureaccess:jar:1.0.1:compile, com.google.guava:listenablefuture=com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile, com.google.code.findbugs:jsr305=com.google.code.findbugs:jsr305:jar:3.0.2:compile, org.checkerframework:checker-qual=org.checkerframework:checker-qual:jar:3.12.0:compile, com.google.errorprone:error_prone_annotations=com.google.errorprone:error_prone_annotations:jar:2.7.1:compile, com.google.j2objc:j2objc-annotations=com.google.j2objc:j2objc-annotations:jar:1.3:compile, com.chemaxon:jchem=com.chemaxon:jchem:jar:16.1.4.0:compile, org.json:json=org.json:json:jar:20220924:compile, commons-lang:commons-lang=commons-lang:commons-lang:jar:2.6:compile}
+[DEBUG]   (s) redirectTestOutputToFile = false
+[DEBUG]   (s) remoteRepositories = [      id: central
+      url: https://repo.maven.apache.org/maven2
+   layout: default
+snapshots: [enabled => false, update => daily]
+ releases: [enabled => true, update => never]
+   blocked: false
+]
+[DEBUG]   (s) reportFormat = brief
+[DEBUG]   (s) reportsDirectory = D:\ctsws\ctsws\target\surefire-reports
+[DEBUG]   (s) runOrder = filesystem
+[DEBUG]   (s) skip = false
+[DEBUG]   (s) skipTests = false
+[DEBUG]   (s) testClassesDirectory = D:\ctsws\ctsws\target\test-classes
+[DEBUG]   (s) testFailureIgnore = false
+[DEBUG]   (s) testNGArtifactName = org.testng:testng
+[DEBUG]   (s) testSourceDirectory = D:\ctsws\ctsws\src\test\java
+[DEBUG]   (s) trimStackTrace = true
+[DEBUG]   (s) useFile = true
+[DEBUG]   (s) useManifestOnlyJar = true
+[DEBUG]   (s) useSystemClassLoader = true
+[DEBUG]   (s) useUnlimitedThreads = false
+[DEBUG]   (s) workingDirectory = D:\ctsws\ctsws
+[DEBUG]   (s) project = MavenProject: ctsws:ctsws:1.0-SNAPSHOT @ D:\ctsws\ctsws\pom.xml
+[DEBUG]   (s) session = org.apache.maven.execution.MavenSession@2ff95fc6
+[DEBUG] -- end configuration --
+[INFO] 
+[INFO] --- maven-war-plugin:3.3.2:war (default-war) @ ctsws ---
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for repository.jboss.org (http://repository.jboss.org/maven2).
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for snapshots.jboss.org (http://snapshots.jboss.org/maven2).
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for oss.sonatype.org/jboss-snapshots (http://oss.sonatype.org/content/repositories/jboss-snapshots).
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=112700, ConflictMarker.markTime=51800, ConflictMarker.nodeCount=173, ConflictIdSorter.graphTime=39700, ConflictIdSorter.topsortTime=27000, ConflictIdSorter.conflictIdCount=48, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=793100, ConflictResolver.conflictItemCount=102, DefaultDependencyCollector.collectTime=149031400, DefaultDependencyCollector.transformTime=1051900}
+[DEBUG] org.apache.maven.plugins:maven-war-plugin:jar:3.3.2
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:3.1.0:compile
+[DEBUG]    org.apache.maven:maven-core:jar:3.1.0:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:3.1.0:compile
+[DEBUG]       org.apache.maven:maven-settings-builder:jar:3.1.0:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:3.1.0:compile
+[DEBUG]       org.apache.maven:maven-model-builder:jar:3.1.0:compile
+[DEBUG]       org.apache.maven:maven-aether-provider:jar:3.1.0:compile
+[DEBUG]          org.eclipse.aether:aether-spi:jar:0.9.0.M2:compile
+[DEBUG]       org.eclipse.aether:aether-impl:jar:0.9.0.M2:compile
+[DEBUG]       org.eclipse.aether:aether-util:jar:0.9.0.M2:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.4.2:compile
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:2.0.0:compile (version managed from default)
+[DEBUG]       org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+[DEBUG]          org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[DEBUG]    org.apache.maven:maven-model:jar:3.1.0:compile
+[DEBUG]    org.apache.maven:maven-archiver:jar:3.5.0:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:3.1.0:compile
+[DEBUG]    org.apache.maven.shared:maven-shared-utils:jar:3.2.1:compile
+[DEBUG]    commons-io:commons-io:jar:2.6:compile
+[DEBUG]    org.codehaus.plexus:plexus-archiver:jar:4.2.2:compile
+[DEBUG]       org.codehaus.plexus:plexus-io:jar:3.2.0:compile
+[DEBUG]       org.apache.commons:commons-compress:jar:1.20:compile
+[DEBUG]       org.iq80.snappy:snappy:jar:0.4:compile
+[DEBUG]       org.tukaani:xz:jar:1.8:runtime
+[DEBUG]    org.codehaus.plexus:plexus-interpolation:jar:1.26:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.3.0:compile
+[DEBUG]    org.apache.maven.shared:maven-filtering:jar:3.1.1:compile
+[DEBUG]       org.sonatype.plexus:plexus-build-api:jar:0.0.7:compile
+[DEBUG]    org.apache.maven.shared:maven-mapping:jar:3.0.0:compile
+[DEBUG]    org.eclipse.aether:aether-api:jar:0.9.0.M2:compile
+[DEBUG]    org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.0.0.M2a:compile
+[DEBUG]       javax.enterprise:cdi-api:jar:1.0:compile
+[DEBUG]          javax.annotation:jsr250-api:jar:1.0:compile
+[DEBUG]          javax.inject:javax.inject:jar:1:compile
+[DEBUG]       com.google.guava:guava:jar:10.0.1:compile
+[DEBUG]          com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[DEBUG]       org.sonatype.sisu:sisu-guice:jar:no_aop:3.1.0:compile
+[DEBUG]          aopalliance:aopalliance:jar:1.0:compile
+[DEBUG]       org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.0.0.M2a:compile
+[DEBUG]          asm:asm:jar:3.3.1:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-war-plugin:3.3.2
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-war-plugin:3.3.2
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-war-plugin:3.3.2
+[DEBUG]   Included: org.apache.maven.plugins:maven-war-plugin:jar:3.3.2
+[DEBUG]   Included: org.eclipse.aether:aether-util:jar:0.9.0.M2
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:2.0.0
+[DEBUG]   Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3
+[DEBUG]   Included: org.sonatype.plexus:plexus-cipher:jar:1.4
+[DEBUG]   Included: org.apache.maven:maven-archiver:jar:3.5.0
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:3.2.1
+[DEBUG]   Included: commons-io:commons-io:jar:2.6
+[DEBUG]   Included: org.codehaus.plexus:plexus-archiver:jar:4.2.2
+[DEBUG]   Included: org.codehaus.plexus:plexus-io:jar:3.2.0
+[DEBUG]   Included: org.apache.commons:commons-compress:jar:1.20
+[DEBUG]   Included: org.iq80.snappy:snappy:jar:0.4
+[DEBUG]   Included: org.tukaani:xz:jar:1.8
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.26
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.3.0
+[DEBUG]   Included: org.apache.maven.shared:maven-filtering:jar:3.1.1
+[DEBUG]   Included: org.sonatype.plexus:plexus-build-api:jar:0.0.7
+[DEBUG]   Included: org.apache.maven.shared:maven-mapping:jar:3.0.0
+[DEBUG]   Included: javax.enterprise:cdi-api:jar:1.0
+[DEBUG]   Included: javax.annotation:jsr250-api:jar:1.0
+[DEBUG]   Included: com.google.guava:guava:jar:10.0.1
+[DEBUG]   Included: com.google.code.findbugs:jsr305:jar:1.3.9
+[DEBUG]   Included: org.sonatype.sisu:sisu-guice:jar:no_aop:3.1.0
+[DEBUG]   Included: aopalliance:aopalliance:jar:1.0
+[DEBUG]   Included: org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.0.0.M2a
+[DEBUG]   Included: asm:asm:jar:3.3.1
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-war-plugin:3.3.2:war from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-war-plugin:3.3.2, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-war-plugin:3.3.2:war' with basic configurator -->
+[DEBUG]   (s) archiveClasses = false
+[DEBUG]   (s) attachClasses = false
+[DEBUG]   (s) classesClassifier = classes
+[DEBUG]   (s) classesDirectory = D:\ctsws\ctsws\target\classes
+[DEBUG]   (f) escapedBackslashesInFilePath = false
+[DEBUG]   (f) filteringDeploymentDescriptors = false
+[DEBUG]   (f) includeEmptyDirectories = false
+[DEBUG]   (f) outdatedCheckPath = WEB-INF/lib/
+[DEBUG]   (s) outputDirectory = D:\ctsws\ctsws\target
+[DEBUG]   (s) primaryArtifact = true
+[DEBUG]   (s) project = MavenProject: ctsws:ctsws:1.0-SNAPSHOT @ D:\ctsws\ctsws\pom.xml
+[DEBUG]   (f) recompressZippedFiles = true
+[DEBUG]   (f) resourceEncoding = UTF-8
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@2ff95fc6
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useDefaultDelimiters = true
+[DEBUG]   (f) useJvmChmod = true
+[DEBUG]   (s) warName = ctsws-1.0-SNAPSHOT
+[DEBUG]   (s) warSourceDirectory = D:\ctsws\ctsws\src\main\webapp
+[DEBUG]   (s) warSourceIncludes = **
+[DEBUG]   (s) webappDirectory = D:\ctsws\ctsws\target\ctsws-1.0-SNAPSHOT
+[DEBUG]   (s) workDirectory = D:\ctsws\ctsws\target\war\work
+[DEBUG] -- end configuration --
+[INFO] Packaging webapp
+[INFO] Assembling webapp [ctsws] in [D:\ctsws\ctsws\target\ctsws-1.0-SNAPSHOT]
+[DEBUG] properties used {env.NUMBER_OF_PROCESSORS=16, env.USERPROFILE=C:\Users\KWOLFE, java.specification.version=15, sun.cpu.isalist=amd64, sun.arch.data.model=64, env.PROGRAMW6432=C:\Program Files, java.vendor.url=https://java.oracle.com/, env.OS=Windows_NT, sun.boot.library.path=C:\Program Files\Java\jdk-15.0.2\bin, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -X package, env.SYSTEMROOT=C:\WINDOWS, jdk.debug=release, maven.version=3.8.6, java.specification.vendor=Oracle Corporation, java.version.date=2021-01-19, java.home=C:\Program Files\Java\jdk-15.0.2, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, env.CHOCOLATEYINSTALL=C:\ProgramData\chocolatey, env.LOCALAPPDATA=C:\Users\KWOLFE\AppData\Local, env.USERDOMAIN_ROAMINGPROFILE=AA, user.script=, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=15.0.2+7-27, env.PATH=C:\Program Files\Eclipse Adoptium\jdk-17.0.5.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-8.0.352.8-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files (x86)\Common Files\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Common Files\Pulse Secure\VC142.CRT\X86\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Common Files\Pulse Secure\TNC Client Plugin\;C:\Program Files\dotnet\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\KWOLFE\AppData\Local\Microsoft\WindowsApps;C:\Users\KWOLFE\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\KWOLFE\.dotnet\tools;D:\DotSpatial\Source\bin\Debug\Plugins\DotSpatial.Plugins.SpatiaLite;C:\Users\KWOLFE\.dotnet\tools;C:\Users\KWOLFE\Documents\apache-maven-3.8.6\bin;C:\Users\KWOLFE\AppData\Local\Microsoft\WindowsApps, env.PUBLIC=C:\Users\Public, env.EXEC_DIR=D:\ctsws\ctsws, env.COMMONPROGRAMW6432=C:\Program Files\Common Files, file.encoding=Cp1252, env.COMPUTERNAME=LZ26KWOLFE, env.HOMEPATH=\Users\KWOLFE, env.APPDATA=C:\Users\KWOLFE\AppData\Roaming, java.io.tmpdir=C:\Users\KWOLFE\AppData\Local\Temp\, java.version=15.0.2, env.JAVA_OPTS=-Djna.library.path="c:\swcalculator_home\dll" -DSWCALCULATOR_HOME="c:\swcalculator_home", env.WT_SESSION=e80249ab-59e8-4a62-b580-e7766d8480fc, java.vm.specification.name=Java Virtual Machine Specification, java.library.path=C:\Program Files\Java\jdk-15.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Eclipse Adoptium\jdk-17.0.5.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-8.0.352.8-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files (x86)\Common Files\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Common Files\Pulse Secure\VC142.CRT\X86\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Common Files\Pulse Secure\TNC Client Plugin\;C:\Program Files\dotnet\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\KWOLFE\AppData\Local\Microsoft\WindowsApps;C:\Users\KWOLFE\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\KWOLFE\.dotnet\tools;D:\DotSpatial\Source\bin\Debug\Plugins\DotSpatial.Plugins.SpatiaLite;C:\Users\KWOLFE\.dotnet\tools;C:\Users\KWOLFE\Documents\apache-maven-3.8.6\bin;C:\Users\KWOLFE\AppData\Local\Microsoft\WindowsApps;., java.vendor=Oracle Corporation, env.ERROR_CODE=0, classworlds.conf=C:\Users\KWOLFE\Documents\apache-maven-3.8.6\bin\m2.conf, sun.io.unicode.encoding=UnicodeLittle, java.vm.specification.version=15, os.name=Windows 10, junit.version=5.9.1, env.=EXITCODE=00000000, maven.compiler.source=11, user.home=C:\Users\KWOLFE, env.ONEDRIVECOMMERCIAL=C:\Users\KWOLFE\OneDrive - Environmental Protection Agency (EPA), env.ALLUSERSPROFILE=C:\ProgramData, env.PROJ_LIB=C:\BASINS45\bin\PROJ_NAD, path.separator=;, os.version=10.0, env.CLASSWORLDS_LAUNCHER=org.codehaus.plexus.classworlds.launcher.Launcher, env.PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC, java.vm.name=OpenJDK 64-Bit Server VM, env.USERNAME=KWOLFE, os.arch=amd64, maven.multiModuleProjectDirectory=D:\ctsws\ctsws, env.GDAL_DATA=C:\BASINS45\bin\gdal_data, env.MVN_HOME=C:\Users\KWOLFE\Documents\apache-maven-3.8.6, env.MAVEN_PROJECTBASEDIR=D:\ctsws\ctsws, java.vm.info=mixed mode, sharing, env.TEMP=C:\Users\KWOLFE\AppData\Local\Temp, java.class.version=59.0, env.ONEDRIVE=C:\Users\KWOLFE\OneDrive - Environmental Protection Agency (EPA), env.STTASKFOLDERPATH=Ivanti\PatchSDK\Deployments, sun.jnu.encoding=Cp1252, env.UATDATA=C:\windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77, maven.build.version=Apache Maven 3.8.6 (84538c9988a25aec085021c365c560670ad80f63), maven.home=C:\Users\KWOLFE\Documents\apache-maven-3.8.6, sun.stderr.encoding=cp437, env.JAVA_HOME=C:\Program Files\Java\jdk-15.0.2, env.PROGRAMFILES=C:\Program Files, file.separator=\, java.vm.compressedOopsMode=Zero based, env.CLASSWORLDS_JAR="C:\Users\KWOLFE\Documents\apache-maven-3.8.6\boot\plexus-classworlds-2.6.0.jar", env.EPAONEDRIVE=C:\Users\KWOLFE\OneDrive - Environmental Protection Agency (EPA), line.separator=
+, env.PROMPT=$P$G, env.PROCESSOR_REVISION=8d01, env.PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 141 Stepping 1, GenuineIntel, env.PROGRAMDATA=C:\ProgramData, user.name=KWOLFE, env.WSLENV=WT_SESSION::WT_PROFILE_ID, env.DRIVERDATA=C:\Windows\System32\Drivers\DriverData, env.SYSTEMDRIVE=C:, env.JVMCONFIG=\.mvn\jvm.config, env.PROGRAMFILES(X86)=C:\Program Files (x86), env.WT_PROFILE_ID={0caa0dad-35be-5f56-a8ff-afceeeaa6101}, env.PROCESSOR_LEVEL=6, env.HOMEDRIVE=C:, env.PSMODULEPATH=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules, env.TMP=C:\Users\KWOLFE\AppData\Local\Temp, sun.os.patch.level=, maven.compiler.target=11, env.LOGONSERVER=\\N26265GAYT601, library.jansi.path=C:\Users\KWOLFE\Documents\apache-maven-3.8.6\lib\jansi-native, env.WINDIR=C:\WINDOWS, env.USERDNSDOMAIN=AA.AD.EPA.GOV, java.class.path=C:\Users\KWOLFE\Documents\apache-maven-3.8.6\boot\plexus-classworlds-2.6.0.jar, java.vm.vendor=Oracle Corporation, env.PROCESSOR_ARCHITECTURE=AMD64, user.variant=, env.COMMONPROGRAMFILES=C:\Program Files\Common Files, maven.conf=C:\Users\KWOLFE\Documents\apache-maven-3.8.6/conf, sun.java.launcher=SUN_STANDARD, user.country=US, env.USERDOMAIN=AA, env.COMSPEC=C:\WINDOWS\system32\cmd.exe, sun.cpu.endian=little, user.language=en, env.JAVACMD=C:\Program Files\Java\jdk-15.0.2\bin\java.exe, env.MAVEN_HOME=C:\Users\KWOLFE\Documents\apache-maven-3.8.6, env.WDIR=D:\ctsws\ctsws, env.=C:=C:\Users\KWOLFE, java.runtime.name=OpenJDK Runtime Environment, project.build.sourceEncoding=UTF-8, env.CHOCOLATEYLASTPATHUPDATE=133032390050256073, env.COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files, env.ZES_ENABLE_SYSMAN=1, env.MAVEN_CMD_LINE_ARGS=-X package, java.vendor.url.bug=https://bugreport.java.com/bugreport/, user.dir=D:\ctsws\ctsws, env.=D:=D:\ctsws\ctsws, java.vm.version=15.0.2+7-27}
+[INFO] Processing war project
+[INFO] Copying webapp resources [D:\ctsws\ctsws\src\main\webapp]
+[DEBUG]  * index.jsp is up to date.
+[DEBUG]  * Reactions/AbioticReduction_v1.4.mrv is up to date.
+[DEBUG]  * Reactions/AbioticReduction_v1.5_wSpRxn.mrv is up to date.
+[DEBUG]  * Reactions/Combo_AbiHyd1.7_AbiRed1.4.mrv is up to date.
+[DEBUG]  * Reactions/Combo_AbiHyd1.8_AbiRed1.5_wSpRxn.mrv is up to date.
+[DEBUG]  * Reactions/Combo_DirPhotoLib1.3_AbiHyd1.8_wSpRxn.mrv is up to date.
+[DEBUG]  * Reactions/DirPhotoLib_041420.mrv is up to date.
+[DEBUG]  * Reactions/DirPhotoLib_RankedwSpRxn_ver1-3.mrv is up to date.
+[DEBUG]  * Reactions/DirPhotoLib_Unranked_ver1-0.mrv is up to date.
+[DEBUG]  * Reactions/Hydrolysis_v1.7.mrv is up to date.
+[DEBUG]  * Reactions/Hydrolysis_v1.8.mrv is up to date.
+[DEBUG]  * Reactions/Hydrolysis_v1.8_wSpRxn.mrv is up to date.
+[DEBUG]  * Reactions/PFAS_EnvironmentalRxnLib_v1.1.mrv is up to date.
+[DEBUG]  * Reactions/SpontaneousRxn_v1.1.mrv is up to date.
+[DEBUG]  * WEB-INF/web.xml is up to date.
+[DEBUG] Dump of the current build pathSet content -->
+[DEBUG] index.jsp
+[DEBUG] Reactions/AbioticReduction_v1.4.mrv
+[DEBUG] Reactions/AbioticReduction_v1.5_wSpRxn.mrv
+[DEBUG] Reactions/Combo_AbiHyd1.7_AbiRed1.4.mrv
+[DEBUG] Reactions/Combo_AbiHyd1.8_AbiRed1.5_wSpRxn.mrv
+[DEBUG] Reactions/Combo_DirPhotoLib1.3_AbiHyd1.8_wSpRxn.mrv
+[DEBUG] Reactions/DirPhotoLib_041420.mrv
+[DEBUG] Reactions/DirPhotoLib_RankedwSpRxn_ver1-3.mrv
+[DEBUG] Reactions/DirPhotoLib_Unranked_ver1-0.mrv
+[DEBUG] Reactions/Hydrolysis_v1.7.mrv
+[DEBUG] Reactions/Hydrolysis_v1.8.mrv
+[DEBUG] Reactions/Hydrolysis_v1.8_wSpRxn.mrv
+[DEBUG] Reactions/PFAS_EnvironmentalRxnLib_v1.1.mrv
+[DEBUG] Reactions/SpontaneousRxn_v1.1.mrv
+[DEBUG] WEB-INF/web.xml
+[DEBUG] -- end of dump --
+[DEBUG]  * WEB-INF/classes/ctsws/chemicalfilter/ChemicalFilter.class is up to date.
+[DEBUG]  * WEB-INF/classes/ctsws/chemicalterms/ChemicalTerms.class is up to date.
+[DEBUG]  * WEB-INF/classes/ctsws/chemicalterms/ChemicalTermsParameters.class is up to date.
+[DEBUG]  * WEB-INF/classes/ctsws/ctsws/HelloServlet.class is up to date.
+[DEBUG]  * WEB-INF/classes/ctsws/metabolism/CTSMetabolite.class is up to date.
+[DEBUG]  * WEB-INF/classes/ctsws/metabolism/Metabolizer$1.class is up to date.
+[DEBUG]  * WEB-INF/classes/ctsws/metabolism/Metabolizer.class is up to date.
+[DEBUG]  * WEB-INF/classes/ctsws/metabolism/MetNode.class is up to date.
+[DEBUG]  * WEB-INF/classes/ctsws/standardizer/Standardizer.class is up to date.
+[DEBUG]  * WEB-INF/classes/ctsws/util/Node.class is up to date.
+[DEBUG]  * WEB-INF/classes/ctsws/util/StatusMessaging.class is up to date.
+[DEBUG] Processing: jakarta.servlet-api-5.0.0.jar
+[DEBUG] Processing: jersey-container-servlet-3.0.4.jar
+[DEBUG]  * WEB-INF/lib/jersey-container-servlet-3.0.4.jar is up to date.
+[DEBUG] Processing: jersey-container-servlet-core-3.0.4.jar
+[DEBUG]  * WEB-INF/lib/jersey-container-servlet-core-3.0.4.jar is up to date.
+[DEBUG] Processing: jakarta.inject-api-2.0.0.jar
+[DEBUG]  * WEB-INF/lib/jakarta.inject-api-2.0.0.jar is up to date.
+[DEBUG] Processing: jersey-common-3.0.4.jar
+[DEBUG]  * WEB-INF/lib/jersey-common-3.0.4.jar is up to date.
+[DEBUG] Processing: jakarta.annotation-api-2.0.0.jar
+[DEBUG]  * WEB-INF/lib/jakarta.annotation-api-2.0.0.jar is up to date.
+[DEBUG] Processing: osgi-resource-locator-1.0.3.jar
+[DEBUG]  * WEB-INF/lib/osgi-resource-locator-1.0.3.jar is up to date.
+[DEBUG] Processing: jersey-server-3.0.4.jar
+[DEBUG]  * WEB-INF/lib/jersey-server-3.0.4.jar is up to date.
+[DEBUG] Processing: jersey-client-3.0.4.jar
+[DEBUG]  * WEB-INF/lib/jersey-client-3.0.4.jar is up to date.
+[DEBUG] Processing: jakarta.validation-api-3.0.0.jar
+[DEBUG]  * WEB-INF/lib/jakarta.validation-api-3.0.0.jar is up to date.
+[DEBUG] Processing: jakarta.ws.rs-api-3.0.0.jar
+[DEBUG]  * WEB-INF/lib/jakarta.ws.rs-api-3.0.0.jar is up to date.
+[DEBUG] Processing: jersey-media-json-jackson-3.0.4.jar
+[DEBUG]  * WEB-INF/lib/jersey-media-json-jackson-3.0.4.jar is up to date.
+[DEBUG] Processing: jersey-entity-filtering-3.0.4.jar
+[DEBUG]  * WEB-INF/lib/jersey-entity-filtering-3.0.4.jar is up to date.
+[DEBUG] Processing: jackson-annotations-2.13.0.jar
+[DEBUG]  * WEB-INF/lib/jackson-annotations-2.13.0.jar is up to date.
+[DEBUG] Processing: jackson-databind-2.13.0.jar
+[DEBUG]  * WEB-INF/lib/jackson-databind-2.13.0.jar is up to date.
+[DEBUG] Processing: jackson-core-2.13.0.jar
+[DEBUG]  * WEB-INF/lib/jackson-core-2.13.0.jar is up to date.
+[DEBUG] Processing: jackson-module-jakarta-xmlbind-annotations-2.13.0.jar
+[DEBUG]  * WEB-INF/lib/jackson-module-jakarta-xmlbind-annotations-2.13.0.jar is up to date.
+[DEBUG] Processing: jakarta.xml.bind-api-3.0.1.jar
+[DEBUG]  * WEB-INF/lib/jakarta.xml.bind-api-3.0.1.jar is up to date.
+[DEBUG] Processing: jakarta.activation-2.0.1.jar
+[DEBUG]  * WEB-INF/lib/jakarta.activation-2.0.1.jar is up to date.
+[DEBUG] Processing: jersey-hk2-3.0.4.jar
+[DEBUG]  * WEB-INF/lib/jersey-hk2-3.0.4.jar is up to date.
+[DEBUG] Processing: hk2-locator-3.0.1.jar
+[DEBUG]  * WEB-INF/lib/hk2-locator-3.0.1.jar is up to date.
+[DEBUG] Processing: aopalliance-repackaged-3.0.1.jar
+[DEBUG]  * WEB-INF/lib/aopalliance-repackaged-3.0.1.jar is up to date.
+[DEBUG] Processing: hk2-api-3.0.1.jar
+[DEBUG]  * WEB-INF/lib/hk2-api-3.0.1.jar is up to date.
+[DEBUG] Processing: hk2-utils-3.0.1.jar
+[DEBUG]  * WEB-INF/lib/hk2-utils-3.0.1.jar is up to date.
+[DEBUG] Processing: javassist-3.25.0-GA.jar
+[DEBUG]  * WEB-INF/lib/javassist-3.25.0-GA.jar is up to date.
+[DEBUG] Processing: jcommander-1.78.jar
+[DEBUG]  * WEB-INF/lib/jcommander-1.78.jar is up to date.
+[DEBUG] Processing: guava-31.0-jre.jar
+[DEBUG]  * WEB-INF/lib/guava-31.0-jre.jar is up to date.
+[DEBUG] Processing: failureaccess-1.0.1.jar
+[DEBUG]  * WEB-INF/lib/failureaccess-1.0.1.jar is up to date.
+[DEBUG] Processing: listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+[DEBUG]  * WEB-INF/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar is up to date.
+[DEBUG] Processing: jsr305-3.0.2.jar
+[DEBUG]  * WEB-INF/lib/jsr305-3.0.2.jar is up to date.
+[DEBUG] Processing: checker-qual-3.12.0.jar
+[DEBUG]  * WEB-INF/lib/checker-qual-3.12.0.jar is up to date.
+[DEBUG] Processing: error_prone_annotations-2.7.1.jar
+[DEBUG]  * WEB-INF/lib/error_prone_annotations-2.7.1.jar is up to date.
+[DEBUG] Processing: j2objc-annotations-1.3.jar
+[DEBUG]  * WEB-INF/lib/j2objc-annotations-1.3.jar is up to date.
+[DEBUG] Processing: jchem-16.1.4.0.jar
+[DEBUG]  * WEB-INF/lib/jchem-16.1.4.0.jar is up to date.
+[DEBUG] Processing: json-20220924.jar
+[DEBUG]  * WEB-INF/lib/json-20220924.jar is up to date.
+[DEBUG] Processing: commons-lang-2.6.jar
+[DEBUG]  * WEB-INF/lib/commons-lang-2.6.jar is up to date.
+[DEBUG] Webapp assembled in [43 msecs]
+[DEBUG] Excluding [] from the generated webapp archive.
+[DEBUG] Including [**] in the generated webapp archive.
+[DEBUG] Build won't fail if web.xml file is missing.
+[INFO] Building war: D:\ctsws\ctsws\target\ctsws-1.0-SNAPSHOT.war
+[DEBUG] adding directory META-INF/
+[DEBUG] adding entry META-INF/MANIFEST.MF
+[DEBUG] adding directory Reactions/
+[DEBUG] adding directory WEB-INF/
+[DEBUG] adding directory WEB-INF/classes/
+[DEBUG] adding directory WEB-INF/classes/ctsws/
+[DEBUG] adding directory WEB-INF/classes/ctsws/chemicalfilter/
+[DEBUG] adding directory WEB-INF/classes/ctsws/chemicalterms/
+[DEBUG] adding directory WEB-INF/classes/ctsws/ctsws/
+[DEBUG] adding directory WEB-INF/classes/ctsws/metabolism/
+[DEBUG] adding directory WEB-INF/classes/ctsws/standardizer/
+[DEBUG] adding directory WEB-INF/classes/ctsws/util/
+[DEBUG] adding directory WEB-INF/lib/
+[DEBUG] adding entry index.jsp
+[DEBUG] adding entry Reactions/AbioticReduction_v1.4.mrv
+[DEBUG] adding entry Reactions/AbioticReduction_v1.5_wSpRxn.mrv
+[DEBUG] adding entry Reactions/Combo_AbiHyd1.7_AbiRed1.4.mrv
+[DEBUG] adding entry Reactions/Combo_AbiHyd1.8_AbiRed1.5_wSpRxn.mrv
+[DEBUG] adding entry Reactions/Combo_DirPhotoLib1.3_AbiHyd1.8_wSpRxn.mrv
+[DEBUG] adding entry Reactions/DirPhotoLib_041420.mrv
+[DEBUG] adding entry Reactions/DirPhotoLib_RankedwSpRxn_ver1-3.mrv
+[DEBUG] adding entry Reactions/DirPhotoLib_Unranked_ver1-0.mrv
+[DEBUG] adding entry Reactions/Hydrolysis_v1.7.mrv
+[DEBUG] adding entry Reactions/Hydrolysis_v1.8.mrv
+[DEBUG] adding entry Reactions/Hydrolysis_v1.8_wSpRxn.mrv
+[DEBUG] adding entry Reactions/PFAS_EnvironmentalRxnLib_v1.1.mrv
+[DEBUG] adding entry Reactions/SpontaneousRxn_v1.1.mrv
+[DEBUG] adding entry WEB-INF/classes/ctsws/chemicalfilter/ChemicalFilter.class
+[DEBUG] adding entry WEB-INF/classes/ctsws/chemicalterms/ChemicalTerms.class
+[DEBUG] adding entry WEB-INF/classes/ctsws/chemicalterms/ChemicalTermsParameters.class
+[DEBUG] adding entry WEB-INF/classes/ctsws/ctsws/HelloServlet.class
+[DEBUG] adding entry WEB-INF/classes/ctsws/metabolism/CTSMetabolite.class
+[DEBUG] adding entry WEB-INF/classes/ctsws/metabolism/Metabolizer$1.class
+[DEBUG] adding entry WEB-INF/classes/ctsws/metabolism/Metabolizer.class
+[DEBUG] adding entry WEB-INF/classes/ctsws/metabolism/MetNode.class
+[DEBUG] adding entry WEB-INF/classes/ctsws/standardizer/Standardizer.class
+[DEBUG] adding entry WEB-INF/classes/ctsws/util/Node.class
+[DEBUG] adding entry WEB-INF/classes/ctsws/util/StatusMessaging.class
+[DEBUG] adding entry WEB-INF/lib/aopalliance-repackaged-3.0.1.jar
+[DEBUG] adding entry WEB-INF/lib/checker-qual-3.12.0.jar
+[DEBUG] adding entry WEB-INF/lib/commons-lang-2.6.jar
+[DEBUG] adding entry WEB-INF/lib/error_prone_annotations-2.7.1.jar
+[DEBUG] adding entry WEB-INF/lib/failureaccess-1.0.1.jar
+[DEBUG] adding entry WEB-INF/lib/guava-31.0-jre.jar
+[DEBUG] adding entry WEB-INF/lib/hk2-api-3.0.1.jar
+[DEBUG] adding entry WEB-INF/lib/hk2-locator-3.0.1.jar
+[DEBUG] adding entry WEB-INF/lib/hk2-utils-3.0.1.jar
+[DEBUG] adding entry WEB-INF/lib/j2objc-annotations-1.3.jar
+[DEBUG] adding entry WEB-INF/lib/jackson-annotations-2.13.0.jar
+[DEBUG] adding entry WEB-INF/lib/jackson-core-2.13.0.jar
+[DEBUG] adding entry WEB-INF/lib/jackson-databind-2.13.0.jar
+[DEBUG] adding entry WEB-INF/lib/jackson-module-jakarta-xmlbind-annotations-2.13.0.jar
+[DEBUG] adding entry WEB-INF/lib/jakarta.activation-2.0.1.jar
+[DEBUG] adding entry WEB-INF/lib/jakarta.annotation-api-2.0.0.jar
+[DEBUG] adding entry WEB-INF/lib/jakarta.inject-api-2.0.0.jar
+[DEBUG] adding entry WEB-INF/lib/jakarta.validation-api-3.0.0.jar
+[DEBUG] adding entry WEB-INF/lib/jakarta.ws.rs-api-3.0.0.jar
+[DEBUG] adding entry WEB-INF/lib/jakarta.xml.bind-api-3.0.1.jar
+[DEBUG] adding entry WEB-INF/lib/javassist-3.25.0-GA.jar
+[DEBUG] adding entry WEB-INF/lib/jchem-16.1.4.0.jar
+[DEBUG] adding entry WEB-INF/lib/jcommander-1.78.jar
+[DEBUG] adding entry WEB-INF/lib/jersey-client-3.0.4.jar
+[DEBUG] adding entry WEB-INF/lib/jersey-common-3.0.4.jar
+[DEBUG] adding entry WEB-INF/lib/jersey-container-servlet-3.0.4.jar
+[DEBUG] adding entry WEB-INF/lib/jersey-container-servlet-core-3.0.4.jar
+[DEBUG] adding entry WEB-INF/lib/jersey-entity-filtering-3.0.4.jar
+[DEBUG] adding entry WEB-INF/lib/jersey-hk2-3.0.4.jar
+[DEBUG] adding entry WEB-INF/lib/jersey-media-json-jackson-3.0.4.jar
+[DEBUG] adding entry WEB-INF/lib/jersey-server-3.0.4.jar
+[DEBUG] adding entry WEB-INF/lib/json-20220924.jar
+[DEBUG] adding entry WEB-INF/lib/jsr305-3.0.2.jar
+[DEBUG] adding entry WEB-INF/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+[DEBUG] adding entry WEB-INF/lib/osgi-resource-locator-1.0.3.jar
+[DEBUG] adding entry WEB-INF/web.xml
+[DEBUG] WEB-INF\web.xml already added, skipping
+[DEBUG] adding entry META-INF/maven/ctsws/ctsws/pom.xml
+[DEBUG] adding entry META-INF/maven/ctsws/ctsws/pom.properties
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.469 s
+[INFO] Finished at: 2023-01-26T13:27:10-05:00
+[INFO] ------------------------------------------------------------------------
