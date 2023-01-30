@@ -7,7 +7,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: ${CTSWS_IMAGE:-ghcr.io/quanted/ctsws:docker}
+    image: ${CTSWS_IMAGE:-ghcr.io/quanted/ctsws:docker-6c406b78366cf184688d2d562a77c454a9cc3987}
     container_name: ctsws
     # expose:
     #   - "8080"
