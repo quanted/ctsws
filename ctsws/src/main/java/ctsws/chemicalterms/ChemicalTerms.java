@@ -25,7 +25,7 @@ import chemaxon.jep.context.MolContext;
 import chemaxon.struc.Molecule;
 import ctsws.util.StatusMessaging;
 
-@WebServlet(name = "chemicaltermsServlet", value = "/chemicalterms")
+@WebServlet(name = "chemicaltermsServlet", value = "/rest/chemicalterms")
 public class ChemicalTerms extends HttpServlet {
 
 	private ServletContext context;

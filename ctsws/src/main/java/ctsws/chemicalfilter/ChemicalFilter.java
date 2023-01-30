@@ -23,7 +23,7 @@ import chemaxon.struc.*;
 
 import org.json.*;
 
-@WebServlet(name = "isvalidchemicalServlet", value = "/isvalidchemical")
+@WebServlet(name = "isvalidchemicalServlet", value = "/rest/isvalidchemical")
 public class ChemicalFilter extends HttpServlet {
 
     private ServletContext context;

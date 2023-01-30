@@ -42,7 +42,7 @@ import org.json.*;
 
 //Sets the path to base URL + /hello
 @Path("/standardizer")
-@WebServlet(name = "standardizerServlet", value = "/standardizer")
+@WebServlet(name = "standardizerServlet", value = "/rest/standardizer")
 public class Standardizer extends HttpServlet {
 
 	@Context ServletContext context;

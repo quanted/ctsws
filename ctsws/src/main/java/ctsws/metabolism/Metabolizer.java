@@ -41,7 +41,7 @@ import org.json.*;
 // The browser requests per default the HTML MIME type.
 
 //@Path("/")
-@WebServlet(name = "metabolizerServlet", value = "/metabolizer")
+@WebServlet(name = "metabolizerServlet", value = "/rest/metabolizer")
 public class Metabolizer extends HttpServlet {
 
 	public Metabolizer() {}
