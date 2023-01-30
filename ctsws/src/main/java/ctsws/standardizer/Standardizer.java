@@ -1,14 +1,25 @@
 package ctsws.standardizer;
 
 import java.util.*;
+import java.io.IOException;
+import java.util.Collections;
 
-//import javax.servlet.ServletContext;
+import java.io.File;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+
 import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.*;
+import jakarta.servlet.annotation.*;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.ws.rs.*;
-import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Context;
-//import javax.ws.rs.*;
-//import javax.ws.rs.core.*;
+import jakarta.ws.rs.core.MediaType;
+
+import org.json.*;
+
 
 //import chemaxon.formats.MolFormatException;
 import chemaxon.formats.MolImporter;
@@ -31,28 +42,50 @@ import org.json.*;
 
 //Sets the path to base URL + /hello
 @Path("/standardizer")
-public class Standardizer {
+@WebServlet(name = "standardizerServlet", value = "/standardizer")
+public class Standardizer extends HttpServlet {
 
 	@Context ServletContext context;
   
-	
+	public Standardizer(@Context ServletContext contextIn)
+	{
+		context = contextIn;
+	}
   
 	//This method is called if HTML is request
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public String getStandardized(String sStdParams)
-	{
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+		String sStdParams;
 		JSONObject joReturn = null;
+		JSONObject stdzrParams;
 		String retVal = null;		
 		List<Changes> changes = null;
 		int ii = 100;
-		//String realPath = context.getRealPath("/");
+
+		context = request.getServletContext();
+		PrintWriter out = response.getWriter();
+
+		StringBuffer jb = new StringBuffer();
+
+		String line = null;
+		try {
+			BufferedReader reader = request.getReader();
+			while ((line = reader.readLine()) != null)
+				jb.append(line);
+		} catch (Exception e) { /*report an error*/ }
+
+		try {
+			stdzrParams =  new JSONObject(jb.toString());
+		} catch (JSONException e) {
+			// crash and burn
+			throw new IOException("Error parsing JSON request string");
+		}
 		  
 		try
 		{
-			JSONObject stdzrParams = new JSONObject(sStdParams);
-			 		  
 			String substrate = stdzrParams.getString("structure");		  
 			JSONArray actions = null;
 			if (stdzrParams.has("actions"))
@@ -98,6 +131,8 @@ public class Standardizer {
 			joReturn.put("status", "success");
 			  
 			retVal = joReturn.toString();
+			response.setContentType("application/json");
+			response.setCharacterEncoding("UTF-8");
 			
 		}
 		catch(Exception ex)
@@ -105,8 +140,9 @@ public class Standardizer {
 			String msg = ex.getMessage();
 			retVal = "{\"status\" : \"error\", \"message\" : \"" + msg + "\"}";
 		}
-		
-		return retVal;
+
+		out.print(retVal);
+		return;
 	}
 	
 	private String getActionString(String action) throws Exception

@@ -1,4 +1,4 @@
-package ctsws.ctsws;
+package ctsws.hello;
 
 import java.io.*;
 
@@ -6,7 +6,7 @@ import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
+@WebServlet(name = "helloServlet", value = "/hello")
 public class HelloServlet extends HttpServlet {
     private String message;
 
