@@ -40,8 +40,6 @@ import org.json.*;
 
 // The browser requests per default the HTML MIME type.
 
-//Sets the path to base URL + /hello
-@Path("/standardizer")
 @WebServlet(name = "standardizerServlet", value = "/rest/standardizer")
 public class Standardizer extends HttpServlet {
 
