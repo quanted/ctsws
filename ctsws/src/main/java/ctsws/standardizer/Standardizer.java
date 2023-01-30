@@ -44,7 +44,8 @@ import org.json.*;
 public class Standardizer extends HttpServlet {
 
 	@Context ServletContext context;
-  
+
+	public Standardizer() {}
 	public Standardizer(@Context ServletContext contextIn)
 	{
 		context = contextIn;
