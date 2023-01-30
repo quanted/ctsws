@@ -1,12 +1,15 @@
-package ctsws.ctsws;
+package ctsws.hello;
 
 import java.io.*;
 
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
+
+@WebServlet(name = "helloServlet", value = "/rest/hello")
 public class HelloServlet extends HttpServlet {
     private String message;
 
@@ -14,17 +17,19 @@ public class HelloServlet extends HttpServlet {
         message = "Hello World!";
     }
 
+    @Produces(MediaType.APPLICATION_JSON)
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
+        response.setContentType("application/json");
 
         ServletContext ctx = request.getServletContext();
         String path = ctx.getRealPath("/");
 
         // Hello
         PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>" + "Real path: " + path + "</h1>");
-        out.println("</body></html>");
+        String retVal = "{\"status\" : \"success\", \"message\" : \"" + path + "\"}";
+        out.print(retVal);
+
+        return;
     }
 
     public void destroy() {
