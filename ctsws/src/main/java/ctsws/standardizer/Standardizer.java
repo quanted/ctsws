@@ -43,7 +43,7 @@ import org.json.*;
 @WebServlet(name = "standardizerServlet", value = "/rest/standardizer")
 public class Standardizer extends HttpServlet {
 
-	@Context ServletContext context;
+	private ServletContext context;
 
 	public Standardizer() {}
 	public Standardizer(@Context ServletContext contextIn)
