@@ -4,10 +4,10 @@ services:
   # CTSWS Apache Tomcat container
   ctsws:
     restart: unless-stopped
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: ${CTSWS_IMAGE:-ghcr.io/quanted/ctsws:docker-6c406b78366cf184688d2d562a77c454a9cc3987}
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    image: ${CTSWS_IMAGE}
     container_name: ctsws
     # expose:
     #   - "8080"
@@ -20,4 +20,5 @@ services:
       - SERVER_USERNAME=${SERVER_USERNAME}
       - SERVER_PASSWORD=${SERVER_PASSWORD}
     volumes:
-      - ./chemaxon/license.cxl:/root/.chemaxon/licenses/license.cxl
+      - ./chemaxon/licenses/license.cxl:/root/.chemaxon/licenses/license.cxl
+      - ./chemaxon/jchem/webapps/webservices:/usr/local/tomcat/webapps/webservices
