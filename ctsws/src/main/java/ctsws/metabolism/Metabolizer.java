@@ -88,6 +88,14 @@ public class Metabolizer extends HttpServlet {
 			}
 
 			String structure = metabolizerParams.getString("structure");
+
+			//We need the ability to filter out redundant metabolites
+			//But now we need to be able to toggle this functionality
+			boolean unique_metabolites = false;
+			if (metabolizerParams.has("unique_metabolites"))
+				unique_metabolites = metabolizerParams.getBoolean("unique_metabolites");
+
+
 			JSONArray transformationLibs = null;
 			if (metabolizerParams.has("transformationLibraries"))
 				transformationLibs = metabolizerParams.getJSONArray("transformationLibraries");
@@ -172,7 +180,7 @@ public class Metabolizer extends HttpServlet {
 		    mtblzer.setExcludeCondition(excludeCond);     
       
 		    //This guy does most of the work
-		    List<Metabolite> lstMetabolites = metabolize(mtblzer, structure);
+		    List<Metabolite> lstMetabolites = metabolize(mtblzer, structure, unique_metabolites);
 
 			JSONObject joMetabs = null;
 		    JSONObject joParent = new JSONObject();
@@ -212,15 +220,13 @@ public class Metabolizer extends HttpServlet {
 	}
   
   //Runs the metabolizer and returns a list of metabolites
-  private List<Metabolite> metabolize(chemaxon.metabolism.Metabolizer metabolizer, String substrate) throws Exception
+  private List<Metabolite> metabolize(chemaxon.metabolism.Metabolizer metabolizer, String substrate, boolean unique_metabolites) throws Exception
   {
-	  List<Metabolite> lstMetabolites = null;
-
 	  Molecule molecule = MolImporter.importMol(substrate);
 	  metabolizer.setSubstrate(molecule,substrate);
 
 	  // execute enumeration and get the resulting metabolite list
-	  List<Metabolite> lstMetabolitesTmp = metabolizer.enumerate();
+	  List<Metabolite> lstMetabolites = metabolizer.enumerate();
 	  List<Metabolite> lstMetabolitesNoExtinct = new ArrayList<Metabolite>();
 
 //	  for (int i=0;i<lstMetabolitesTmp.size();i++)
@@ -231,7 +237,9 @@ public class Metabolizer extends HttpServlet {
 //	  }
 
 	  // get a list of unique metabolites sorted by global accumulation (major metabolite indicator)
-	  lstMetabolites = metabolizer.calculateGlobals(lstMetabolitesTmp);
+	  if (unique_metabolites)
+	  	lstMetabolites = metabolizer.calculateGlobals(lstMetabolites);
+
 	  //lstMetabolites = metabolizer.calculateGlobals(lstMetabolitesNoExtinct);
 	  if (lstMetabolites != null && lstMetabolites.size() > 0)
 	  {
