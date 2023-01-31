@@ -16,9 +16,7 @@ services:
     environment:
       - JAVA_OPTS=-Xmx1g
       - LOG4J_FORMAT_MSG_NO_LOOKUPS=true
-      - CHEMAXON_LICENSE_URL=/root/.chemaxon/licenses/license.cxl
       - SERVER_USERNAME=${SERVER_USERNAME}
       - SERVER_PASSWORD=${SERVER_PASSWORD}
     volumes:
       - ./chemaxon/licenses/license.cxl:/root/.chemaxon/licenses/license.cxl
-      - ./chemaxon/jchem/webapps/webservices:/usr/local/tomcat/webapps/webservices
