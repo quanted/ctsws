@@ -64,7 +64,7 @@ public class ChemicalFilter extends HttpServlet {
             throw new IOException("Error parsing JSON request string");
         }
 
-        String smiles = joChemStruct.getString("smiles");
+        String smiles = joChemStruct.getString("structure");
 
         int[] excludeList = {2,3,4,5,10,11,12,13,14,18,19,20,21,22,23,24,25,26,
                             27,28,29,30,31,32,33,34,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,
