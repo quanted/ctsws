@@ -59,9 +59,12 @@ public class ChemicalFilter extends HttpServlet {
 
         try {
             joChemStruct =  new JSONObject(jb.toString());
-        } catch (JSONException e) {
+        } catch (JSONException ex) {
             // crash and burn
-            throw new IOException("Error parsing JSON request string");
+            String msg2 = ex.getMessage();
+            retVal = "{\"status\" : \"error\", \"message\" : \"Error parsing JSON request string\"}";
+            out.print(retVal);
+            return;
         }
 
         String smiles = joChemStruct.getString("structure");
@@ -99,7 +102,9 @@ public class ChemicalFilter extends HttpServlet {
         }
 
         catch(Exception ex){
-            msg = ex.getMessage();
+            String msg2 = ex.getMessage();
+            retVal = "{\"status\" : \"error\", \"message\" : \"" + msg2 + "\"}";
+            out.print(retVal);
         }
 
         String msg2 = msg;
