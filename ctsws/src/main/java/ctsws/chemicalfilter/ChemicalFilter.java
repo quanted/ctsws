@@ -105,7 +105,7 @@ public class ChemicalFilter extends HttpServlet {
         String msg2 = msg;
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
-        out.print(joReturn.toString());
+        out.print(joResult.toString());
 
         return;
     }
