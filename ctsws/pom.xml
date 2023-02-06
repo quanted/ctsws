@@ -89,6 +89,12 @@
             <version>3.1.0</version>
             <!-- <scope>provided</scope> -->
         </dependency>
+        <dependency>
+            <groupId>dk.brics</groupId>
+            <artifactId>automaton</artifactId>
+            <version>1.12-4</version>
+        </dependency>
+</dependency>
     </dependencies>
     <build>
         <plugins>

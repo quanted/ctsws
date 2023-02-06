@@ -4,12 +4,12 @@
   <servers>
     <server>
       <id>Chemaxon Public Repository</id>
-      <username>${env.SERVER_USERNAME}</username>
-      <password>${env.SERVER_PASSWORD}</password>
+      <username>${env.CTSWS_SERVER_USERNAME}</username>
+      <password>${env.CTSWS_SERVER_PASSWORD}</password>
     </server>
     <server>
-      <username>${env.SERVER_USERNAME}</username>
-      <password>${env.SERVER_PASSWORD}</password>
+      <username>${env.CTSWS_SERVER_USERNAME}</username>
+      <password>${env.CTSWS_SERVER_PASSWORD}</password>
       <id>snapshots</id>
     </server>
   </servers>

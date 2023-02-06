@@ -16,7 +16,7 @@ services:
     environment:
       - JAVA_OPTS=-Xmx1g
       - LOG4J_FORMAT_MSG_NO_LOOKUPS=true
-      - SERVER_USERNAME=${SERVER_USERNAME}
-      - SERVER_PASSWORD=${SERVER_PASSWORD}
+      - CTSWS_SERVER_USERNAME=${CTSWS_SERVER_USERNAME}
+      - CTSWS_SERVER_PASSWORD=${CTSWS_SERVER_PASSWORD}
     volumes:
       - ./chemaxon/licenses/license.cxl:/root/.chemaxon/licenses/license.cxl
