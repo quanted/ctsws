@@ -94,7 +94,6 @@
             <artifactId>automaton</artifactId>
             <version>1.12-4</version>
         </dependency>
-</dependency>
     </dependencies>
     <build>
         <plugins>
