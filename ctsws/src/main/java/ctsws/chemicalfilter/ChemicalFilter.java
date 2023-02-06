@@ -59,12 +59,15 @@ public class ChemicalFilter extends HttpServlet {
 
         try {
             joChemStruct =  new JSONObject(jb.toString());
-        } catch (JSONException e) {
+        } catch (JSONException ex) {
             // crash and burn
-            throw new IOException("Error parsing JSON request string");
+            String msg2 = ex.getMessage();
+            retVal = "{\"status\" : \"error\", \"message\" : \"Error parsing JSON request string\"}";
+            out.print(retVal);
+            return;
         }
 
-        String smiles = joChemStruct.getString("smiles");
+        String smiles = joChemStruct.getString("structure");
 
         int[] excludeList = {2,3,4,5,10,11,12,13,14,18,19,20,21,22,23,24,25,26,
                             27,28,29,30,31,32,33,34,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,
@@ -99,13 +102,15 @@ public class ChemicalFilter extends HttpServlet {
         }
 
         catch(Exception ex){
-            msg = ex.getMessage();
+            String msg2 = ex.getMessage();
+            retVal = "{\"status\" : \"error\", \"message\" : \"" + msg2 + "\"}";
+            out.print(retVal);
         }
 
         String msg2 = msg;
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
-        out.print(joReturn.toString());
+        out.print(joResult.toString());
 
         return;
     }
