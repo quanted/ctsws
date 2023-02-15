@@ -51,7 +51,7 @@ public class Metabolizer extends HttpServlet {
 		context = contextIn;
 	}
 	//@Context ServletContext context;
-	
+
 	//This method is called if HTML is request
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
@@ -101,7 +101,7 @@ public class Metabolizer extends HttpServlet {
 				transformationLibs = metabolizerParams.getJSONArray("transformationLibraries");
 
 			double likelyLimit = metabolizerParams.getDouble("likelyLimit");
-      
+
 			int genLimit = metabolizerParams.getInt("generationLimit");
 		    int popLimit = metabolizerParams.getInt("populationLimit");
 		    String excludeCond = metabolizerParams.getString("excludeCondition");
@@ -177,8 +177,8 @@ public class Metabolizer extends HttpServlet {
 		    mtblzer.setLikelyLimit(likelyLimit);
 		    mtblzer.setPopulationLimit(popLimit);
 		    mtblzer.setGenerationLimit(genLimit);
-		    mtblzer.setExcludeCondition(excludeCond);     
-      
+		    mtblzer.setExcludeCondition(excludeCond);
+
 		    //This guy does most of the work
 		    List<Metabolite> lstMetabolites = metabolize(mtblzer, structure, unique_metabolites);
 
@@ -271,7 +271,7 @@ public class Metabolizer extends HttpServlet {
 			{
 				MetNode childNode = RecurseMetabolites(metabolite.getChild(i), hashMap);
 				String key = childNode.metabolite.getKey();
-				if (childNode.metabolite.getState() != Metabolite.State.EXTINCT)
+				//if (childNode.metabolite.getState() != Metabolite.State.EXTINCT)
 				{
 					//if (!hashMap.containsKey(key))
 					//{

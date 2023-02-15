@@ -1,6 +1,7 @@
 package ctsws.metabolism;
 
 import chemaxon.metabolism.Metabolite;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.IOException;
@@ -27,22 +28,27 @@ public class MetNode
         JSONObject joMetProps = null;
         JSONObject joGenOne = null;
         JSONObject joReturn = null;
+        JSONArray jaMetabolites = null;
         try
         {
             jo = new JSONObject();
+            jaMetabolites = new JSONArray();
 
             for (int i = 0; i < children.size(); i++) {
                 MetNode node = children.get(i);
-                jo.put(node.metabolite.getKey(), node.ToJson());
+                //jo.put(node.metabolite.getKey(), node.ToJson());
+                jaMetabolites.put(node.ToJson());
             }
 
             joMetProps = getMetaboliteProperties(metabolite);
-            joMetProps.put("metabolites", jo);
+            //joMetProps.put("metabolites", jo);
+            joMetProps.put("metabolites", jaMetabolites);
 
             if (metabolite.getGeneration() == 0)
             {
                 joGenOne = new JSONObject();
-                joGenOne.put(metabolite.getKey(), joMetProps);
+                //joGenOne.put(metabolite.getKey(), joMetProps);
+                joGenOne.put("metabolites", joMetProps);
                 joReturn = joGenOne;
             }
             else
