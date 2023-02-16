@@ -24,15 +24,17 @@ public class MetNode
 
     public JSONObject ToJson()
     {
-        JSONObject jo = null;
+        //JSONObject jo = null;
         JSONObject joMetProps = null;
-        JSONObject joGenOne = null;
+        //JSONObject joGenOne = null;
+        JSONArray joGenOne = null;
         JSONObject joReturn = null;
-        JSONArray jaMetabolites = null;
+        JSONArray jaReturn = null;
+        JSONArray jaMetabolites = new JSONArray();;
         try
         {
-            jo = new JSONObject();
-            jaMetabolites = new JSONArray();
+            //jo = new JSONObject();
+
 
             for (int i = 0; i < children.size(); i++) {
                 MetNode node = children.get(i);
@@ -44,23 +46,27 @@ public class MetNode
             //joMetProps.put("metabolites", jo);
             joMetProps.put("metabolites", jaMetabolites);
 
-            if (metabolite.getGeneration() == 0)
-            {
-                joGenOne = new JSONObject();
+            //if (metabolite.getGeneration() == 0)
+            //{
+                //joGenOne = new JSONObject();
+            //    jaGenOne = new JSONArray();
                 //joGenOne.put(metabolite.getKey(), joMetProps);
-                joGenOne.put("metabolites", joMetProps);
-                joReturn = joGenOne;
-            }
-            else
-                joReturn = joMetProps;
+                //joGenOne.put("metabolites", joMetProps);
+            //    jaGenOne.put("metabolites", joMetProps);
+                //joReturn = joGenOne;
+            //    jaReturn = jaGenOne;
+            //}
+            //else
+              //  jaReturn = joMetProps;
+                //joReturn = joMetProps;
 
         }
         catch (Exception exep)
         {
-
+            int i = 1;
         }
-        return joReturn;
-        //return joMetProps;
+        //return joReturn;
+        return joMetProps;
     }
 
 
