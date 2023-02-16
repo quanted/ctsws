@@ -183,16 +183,19 @@ public class Metabolizer extends HttpServlet {
 		    List<Metabolite> lstMetabolites = metabolize(mtblzer, structure, unique_metabolites);
 
 			JSONObject joMetabs = null;
-		    JSONObject joParent = new JSONObject();
+		    //JSONObject joParent = new JSONObject();
+			JSONArray jaParent = new JSONArray();
 
 			HashMap<String, Metabolite> hashMap = new HashMap<String, Metabolite>();
 		    //recurseMetaboliteTree(lstMetabolites.get(0), hashMap);
 			MetNode node = RecurseMetabolites(lstMetabolites.get(0), hashMap);
 			joMetabs = node.ToJson();
 
-		    joParent.put("metabolites", joMetabs);
+		    //joParent.put("metabolites", joMetabs);
+			jaParent.put(joMetabs);
 		    JSONObject joMetTree = new JSONObject();
-		    joMetTree.put(structure, joParent);
+		    //joMetTree.put(structure, joParent);
+			joMetTree.put(structure, jaParent);
 			//joMetTree.put(structure, joMetabs);
 
 		    joReturn = new JSONObject();
