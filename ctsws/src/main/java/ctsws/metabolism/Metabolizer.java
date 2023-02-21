@@ -188,7 +188,7 @@ public class Metabolizer extends HttpServlet {
 
 			HashMap<String, String> hashMap = new HashMap<String, String>();
 		    //recurseMetaboliteTree(lstMetabolites.get(0), hashMap);
-			MetNode node = RecurseMetabolites(lstMetabolites.get(0), hashMap);
+			MetNode node = RecurseMetabolites(lstMetabolites.get(0), hashMap, unique_metabolites);
 			joMetabs = node.ToJson();
 
 		    //joParent.put("metabolites", joMetabs);
@@ -282,7 +282,7 @@ public class Metabolizer extends HttpServlet {
 	  return lstMetabolites;
   }
 
-	private MetNode RecurseMetabolites(Metabolite metabolite, HashMap<String, String> hashMap)
+	private MetNode RecurseMetabolites(Metabolite metabolite, HashMap<String, String> hashMap, boolean unique_metabolites)
 	{
 		MetNode node = null;
 		try
@@ -295,12 +295,17 @@ public class Metabolizer extends HttpServlet {
 
 			for (int i=0;i<metabolite.getChildCount();i++)
 			{
-				MetNode childNode = RecurseMetabolites(metabolite.getChild(i), hashMap);
+				MetNode childNode = RecurseMetabolites(metabolite.getChild(i), hashMap, unique_metabolites);
 				String key = childNode.metabolite.getKey();
 
-				if (!hashMap.containsKey(key)) {
+				if (unique_metabolites) {
+					if (!hashMap.containsKey(key)) {
 						node.children.add(childNode);
 						hashMap.put(key, key);
+					}
+				}
+				else {
+					node.children.add(childNode);
 				}
 
 
