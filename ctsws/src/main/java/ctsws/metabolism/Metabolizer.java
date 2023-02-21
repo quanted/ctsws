@@ -186,7 +186,7 @@ public class Metabolizer extends HttpServlet {
 		    //JSONObject joParent = new JSONObject();
 			JSONArray jaParent = new JSONArray();
 
-			HashMap<String, Metabolite> hashMap = new HashMap<String, Metabolite>();
+			HashMap<String, String> hashMap = new HashMap<String, String>();
 		    //recurseMetaboliteTree(lstMetabolites.get(0), hashMap);
 			MetNode node = RecurseMetabolites(lstMetabolites.get(0), hashMap);
 			joMetabs = node.ToJson();
@@ -230,7 +230,7 @@ public class Metabolizer extends HttpServlet {
 
 	  // execute enumeration and get the resulting metabolite list
 	  List<Metabolite> lstMetabolites = metabolizer.enumerate();
-	  List<Metabolite> lstMetabolitesNoExtinct = new ArrayList<Metabolite>();
+	  List<Metabolite> lstMetabolitesUnique = new ArrayList<Metabolite>();
 
 //	  for (int i=0;i<lstMetabolitesTmp.size();i++)
 //	  {
@@ -239,9 +239,32 @@ public class Metabolizer extends HttpServlet {
 //			lstMetabolitesNoExtinct.add(metabolite);
 //	  }
 
-	  // get a list of unique metabolites sorted by global accumulation (major metabolite indicator)
-	  if (unique_metabolites)
-	  	lstMetabolites = metabolizer.calculateGlobals(lstMetabolites);
+	  //Get a list of unique metabolites sorted by global accumulation (major metabolite indicator)
+	  //We need to call calculateGlobals even if we arent doing unique metabolites
+	  //Will assign the values to the full list of metabolites
+	  lstMetabolitesUnique = metabolizer.calculateGlobals(lstMetabolites);
+
+	  if (!unique_metabolites) {
+		  HashMap<String, Double> hashMap = new HashMap<String, Double>();
+		  for (int i = 0; i < lstMetabolitesUnique.size(); i++) {
+			  Metabolite metab = lstMetabolitesUnique.get(i);
+			  hashMap.put(metab.getKey(), metab.getGlobalAccumulation());
+		  }
+
+		  for (int i = 0; i < lstMetabolites.size(); i++) {
+			  Metabolite metab = lstMetabolites.get(i);
+			  Double globAccum = hashMap.get(metab.getKey());
+			  metab.setGlobalAccumulation(globAccum);
+		  }
+	  }
+	  else {
+		  lstMetabolites = lstMetabolitesUnique;
+	  }
+
+
+		  //lstMetabolites = lstMetabolitesUnique;
+
+
 
 	  //lstMetabolites = metabolizer.calculateGlobals(lstMetabolitesNoExtinct);
 	  if (lstMetabolites != null && lstMetabolites.size() > 0)
@@ -259,7 +282,7 @@ public class Metabolizer extends HttpServlet {
 	  return lstMetabolites;
   }
 
-	private MetNode RecurseMetabolites(Metabolite metabolite, HashMap<String, Metabolite> hashMap)
+	private MetNode RecurseMetabolites(Metabolite metabolite, HashMap<String, String> hashMap)
 	{
 		MetNode node = null;
 		try
@@ -274,14 +297,12 @@ public class Metabolizer extends HttpServlet {
 			{
 				MetNode childNode = RecurseMetabolites(metabolite.getChild(i), hashMap);
 				String key = childNode.metabolite.getKey();
-				//if (childNode.metabolite.getState() != Metabolite.State.EXTINCT)
-				{
-					//if (!hashMap.containsKey(key))
-					//{
+
+				if (!hashMap.containsKey(key)) {
 						node.children.add(childNode);
-						//hashMap.put(childNode.metabolite.getKey(), childNode.metabolite);
-					//}
+						hashMap.put(key, key);
 				}
+
 
 				//if (hashMap.containsKey(childNode.get_metabolite().getKey()))
 				//    node.add(childNode);
