@@ -10,7 +10,6 @@ import java.util.ArrayList;
 public class MetNode
 {
     public Metabolite metabolite;
-
     public String smiles;
     public ArrayList<MetNode> children;
 

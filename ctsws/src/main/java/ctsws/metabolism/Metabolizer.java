@@ -242,31 +242,46 @@ public class Metabolizer extends HttpServlet {
 	  //Get a list of unique metabolites sorted by global accumulation (major metabolite indicator)
 	  //We need to call calculateGlobals even if we arent doing unique metabolites
 	  //Will assign the values to the full list of metabolites
+	  //Unique metabolites now means to remove duplicates from each generation not from the entire tree
+
 	  lstMetabolitesUnique = metabolizer.calculateGlobals(lstMetabolites);
+	  /*
+	  HashMap<String, Double> hashMap = new HashMap<String, Double>();
+	  for (int i = 0; i < lstMetabolitesUnique.size(); i++) {
+		  Metabolite metab = lstMetabolitesUnique.get(i);
+		  hashMap.put(metab.getKey(), metab.getGlobalAccumulation());
+	  }
 
-	  if (!unique_metabolites) {
-		  HashMap<String, Double> hashMap = new HashMap<String, Double>();
-		  for (int i = 0; i < lstMetabolitesUnique.size(); i++) {
-			  Metabolite metab = lstMetabolitesUnique.get(i);
-			  hashMap.put(metab.getKey(), metab.getGlobalAccumulation());
-		  }
-
+	  for (int i = 0; i < lstMetabolites.size(); i++) {
+		  Metabolite metab = lstMetabolites.get(i);
+		  Double globAccum = hashMap.get(metab.getKey());
+		  metab.setGlobalAccumulation(globAccum);
+	  }
+*/
+	  if (unique_metabolites) {
+		  HashMap<String, Metabolite> hashMapMetab = new HashMap<String, Metabolite>();
 		  for (int i = 0; i < lstMetabolites.size(); i++) {
 			  Metabolite metab = lstMetabolites.get(i);
-			  Double globAccum = hashMap.get(metab.getKey());
-			  metab.setGlobalAccumulation(globAccum);
+			  String keyGenSmiles;
+			  if (metab.getGeneration() == 0) {
+				  keyGenSmiles = metab.getKey();
+				  hashMapMetab.put(keyGenSmiles, metab);
+			  }
+			  else {
+				  keyGenSmiles = metab.getParent().getKey() + "_" + metab.getKey() + "_" + metab.getGeneration();
+				  if (!hashMapMetab.containsKey(keyGenSmiles))
+					  hashMapMetab.put(keyGenSmiles, metab);
+			  }
 		  }
-	  }
-	  else {
-		  lstMetabolites = lstMetabolitesUnique;
-	  }
 
+		  Collection<Metabolite> collMetabs = hashMapMetab.values();
+		  ArrayList<Metabolite> lstMetabs = new ArrayList<>(collMetabs);
 
 		  //lstMetabolites = lstMetabolitesUnique;
+		  lstMetabolites = lstMetabs;
+	  }
 
-
-
-	  //lstMetabolites = metabolizer.calculateGlobals(lstMetabolitesNoExtinct);
+	  //Sort the list by metabolite generation
 	  if (lstMetabolites != null && lstMetabolites.size() > 0)
 	  {
 		  Collections.sort(lstMetabolites, new Comparator<Metabolite>()
@@ -297,16 +312,17 @@ public class Metabolizer extends HttpServlet {
 			{
 				MetNode childNode = RecurseMetabolites(metabolite.getChild(i), hashMap, unique_metabolites);
 				String key = childNode.metabolite.getKey();
+				node.children.add(childNode);
 
-				if (unique_metabolites) {
-					if (!hashMap.containsKey(key)) {
-						node.children.add(childNode);
-						hashMap.put(key, key);
-					}
-				}
-				else {
-					node.children.add(childNode);
-				}
+				//if (unique_metabolites) {
+					//if (!hashMap.containsKey(key)) {
+						//node.children.add(childNode);
+						//hashMap.put(key, key);
+					//}
+				//}
+				//else {
+					//node.children.add(childNode);
+				//}
 
 
 				//if (hashMap.containsKey(childNode.get_metabolite().getKey()))
