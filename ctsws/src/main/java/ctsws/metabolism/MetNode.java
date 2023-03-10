@@ -20,6 +20,17 @@ public class MetNode
         children = new ArrayList<MetNode>();
     }
 
+    @Override
+    public String toString() {
+        return smiles + "_" + metabolite.getGeneration();
+    }
+    @Override
+    public boolean equals(Object obj) {
+        MetNode node = (MetNode)obj;
+        String key = smiles + "_" + metabolite.getGeneration();
+        return key.equals(node.toString());
+    }
+
 
     public JSONObject ToJson()
     {

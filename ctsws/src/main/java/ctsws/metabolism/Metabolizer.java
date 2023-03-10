@@ -180,23 +180,23 @@ public class Metabolizer extends HttpServlet {
 		    mtblzer.setExcludeCondition(excludeCond);
 
 		    //This guy does most of the work
-		    List<Metabolite> lstMetabolites = metabolize(mtblzer, structure, unique_metabolites);
+			List<Metabolite> lstMetabolites = Metabolize(mtblzer, structure, unique_metabolites);
 
 			JSONObject joMetabs = null;
 		    //JSONObject joParent = new JSONObject();
 			JSONArray jaParent = new JSONArray();
 
-			HashMap<String, String> hashMap = new HashMap<String, String>();
+			HashMap<String, Integer> map = new HashMap<String, Integer>();
+			for (int i=0;i<lstMetabolites.size();i++)
+				map.put(lstMetabolites.get(i).getKey() + "___" + lstMetabolites.get(i).getGeneration(), i);
 		    //recurseMetaboliteTree(lstMetabolites.get(0), hashMap);
-			MetNode node = RecurseMetabolites(lstMetabolites.get(0), hashMap, unique_metabolites);
+			MetNode node = RecurseMetabolites(lstMetabolites.get(0), unique_metabolites);
 			joMetabs = node.ToJson();
 
-		    //joParent.put("metabolites", joMetabs);
+
 			jaParent.put(joMetabs);
 		    JSONObject joMetTree = new JSONObject();
-		    //joMetTree.put(structure, joParent);
 			joMetTree.put(structure, jaParent);
-			//joMetTree.put(structure, joMetabs);
 
 		    joReturn = new JSONObject();
 		    joReturn.put("results", joMetTree);
@@ -206,7 +206,6 @@ public class Metabolizer extends HttpServlet {
 			response.setCharacterEncoding("UTF-8");
 			out.print(joReturn.toString());
 
-			//retVal = joReturn.toString();
 		}
 		catch(Exception e)
 		{
@@ -223,7 +222,7 @@ public class Metabolizer extends HttpServlet {
 	}
   
   //Runs the metabolizer and returns a list of metabolites
-  private List<Metabolite> metabolize(chemaxon.metabolism.Metabolizer metabolizer, String substrate, boolean unique_metabolites) throws Exception
+  private List<Metabolite> Metabolize(chemaxon.metabolism.Metabolizer metabolizer, String substrate, boolean unique_metabolites) throws Exception
   {
 	  Molecule molecule = MolImporter.importMol(substrate);
 	  metabolizer.setSubstrate(molecule,substrate);
@@ -232,12 +231,7 @@ public class Metabolizer extends HttpServlet {
 	  List<Metabolite> lstMetabolites = metabolizer.enumerate();
 	  List<Metabolite> lstMetabolitesUnique = new ArrayList<Metabolite>();
 
-//	  for (int i=0;i<lstMetabolitesTmp.size();i++)
-//	  {
-//	  	Metabolite metabolite = lstMetabolitesTmp.get(i);
-//	  	if (metabolite.getState() != Metabolite.State.EXTINCT)
-//			lstMetabolitesNoExtinct.add(metabolite);
-//	  }
+
 
 	  //Get a list of unique metabolites sorted by global accumulation (major metabolite indicator)
 	  //We need to call calculateGlobals even if we arent doing unique metabolites
@@ -297,7 +291,8 @@ public class Metabolizer extends HttpServlet {
 	  return lstMetabolites;
   }
 
-	private MetNode RecurseMetabolites(Metabolite metabolite, HashMap<String, String> hashMap, boolean unique_metabolites)
+
+	private MetNode RecurseMetabolites(Metabolite metabolite, boolean unique_metabolites)
 	{
 		MetNode node = null;
 		try
@@ -310,24 +305,16 @@ public class Metabolizer extends HttpServlet {
 
 			for (int i=0;i<metabolite.getChildCount();i++)
 			{
-				MetNode childNode = RecurseMetabolites(metabolite.getChild(i), hashMap, unique_metabolites);
-				String key = childNode.metabolite.getKey();
-				node.children.add(childNode);
-
-				//if (unique_metabolites) {
-					//if (!hashMap.containsKey(key)) {
-						//node.children.add(childNode);
-						//hashMap.put(key, key);
-					//}
-				//}
-				//else {
-					//node.children.add(childNode);
-				//}
-
-
-				//if (hashMap.containsKey(childNode.get_metabolite().getKey()))
-				//    node.add(childNode);
-				//return node;
+				MetNode childNode = RecurseMetabolites(metabolite.getChild(i), unique_metabolites);
+				String smiles = childNode.metabolite.getKey();
+				int generation = childNode.metabolite.getGeneration();
+				String key = smiles + "___" + generation;
+				if (unique_metabolites){
+					if (!node.children.contains(childNode))
+						node.children.add(childNode);
+				}
+				else
+					node.children.add(childNode);
 			}
 		}
 		catch(Exception ex)
@@ -405,164 +392,4 @@ public class Metabolizer extends HttpServlet {
 		}
 		return retVal;
 	}
-
-
-/*
-  private JSONObject recurseMetaboliteTree(Metabolite metabolite, JSONObject joMetabParent, HashMap<String, Metabolite> hashMap)
-  {
-	  try
-	  {
-		  if (metabolite == null)
-		      return null;
-
-          JSONObject joMet = getMetaboliteProperties(metabolite);
-
-
-          for (int i=0;i< metabolite.getChildCount(); i++)
-          {
-              JSONObject joChild = recurseMetaboliteTree(metabolite.getChild(i), joMet, hashMap);
-          }
-
-          if (metabolite.getState() == Metabolite.State.EXTINCT)
-		      return null;
-
-		  if (hashMap.containsKey(metabolite.getKey()))
-		  	  return null;
-
-		  hashMap.put(metabolite.getKey(), metabolite);
-          joMetabParent.put(metabolite.getKey(), joMet);
-		  
-		  JSONObject joMetChildren = new JSONObject();
-		  
-		  if (metabolite.getChildCount() > 0)
-		  	joMet.put("metabolites", joMetChildren);
-
-
-	  }
-	  catch(Exception ex)
-	  {
-		  
-	  }	  
-  }
-*/
-  /*
-    private void recurseMetaboliteTreeOrig(Metabolite metabolite, JSONObject joMetabIn, HashMap<String, Metabolite> hashMap)
-    {
-        try
-        {
-            if (metabolite == null)
-                return;
-
-            if (metabolite.getState() == Metabolite.State.EXTINCT)
-                return;
-
-            if (hashMap.containsKey(metabolite.getKey()))
-                return;
-
-            hashMap.put(metabolite.getKey(), metabolite);
-
-
-            JSONObject joMet = getMetaboliteProperties(metabolite);
-            joMetabIn.put(metabolite.getKey(), joMet);
-
-            JSONObject joMetChildren = new JSONObject();
-
-            if (metabolite.getChildCount() > 0)
-                joMet.put("metabolites", joMetChildren);
-
-            for (int i=0;i< metabolite.getChildCount(); i++)
-            {
-                recurseMetaboliteTree(metabolite.getChild(i), joMetChildren, hashMap);
-            }
-        }
-        catch(Exception ex)
-        {
-
-        }
-    }
-
-*/
-/*
-  private CTSMetabolite getCTSMetabolite(Metabolite metabolite) throws JSONException
-  {
-	  if (metabolite == null)
-		  return null;
-	  
-	  CTSMetabolite met = null;
-	  try
-	  {		  	 
-		  met = new CTSMetabolite(metabolite.getKey());
-		  met.accumulation =  metabolite.getAccumulation();
-	      met.degradation = metabolite.getDegradation();
-	      met.formationRate = metabolite.getFormation();
-	      met.generation = metabolite.getGeneration();
-	      met.globalAccumulation = metabolite.getGlobalAccumulation();      
-	      met.globalFormationRate = metabolite.getGlobalFormation();
-	      met.globalProduction = metabolite.getGlobalProduction();
-	      met.likelihood = metabolite.getLikelihood().toString();
-	      met.phase = metabolite.getPhase();
-	      met.production = metabolite.getProduction();
-	      met.route = metabolite.getRoute();
-	      met.routes = metabolite.getRoutes();
-	      met.state = metabolite.getState().toString();
-	      met.transmissivity = metabolite.getTransmissivity();
-	      met.parentKey = metabolite.getParent().getKey();
-      
-	  }
-	  catch(Exception ex)
-	  {
-		  
-	  }
-	  return met;
-      
-  }
-*/
-
-/*
-  private JSONObject getMetaboliteProperties(Metabolite metabolite) throws JSONException
-  {
-    JSONObject jo = new JSONObject();
-
-    jo.put("accumulation", metabolite.getAccumulation());
-    jo.put("globalAccumulation", metabolite.getGlobalAccumulation());
-
-    jo.put("degradation", metabolite.getDegradation());
-    jo.put("generation", metabolite.getGeneration());
-
-    jo.put("formationRate", metabolite.getFormation());
-    jo.put("globalFormationRate", metabolite.getGlobalFormation());
-
-    jo.put("likelihood", metabolite.getLikelihood());
-
-    jo.put("production", metabolite.getProduction());
-    jo.put("globalProduction", metabolite.getGlobalProduction() );
-
-    jo.put("phase", metabolite.getPhase());
-    jo.put("state", metabolite.getState().toString());
-
-    jo.put("transmissivity", metabolite.getTransmissivity());
-
-    jo.put("route", metabolite.getRoute());
-    jo.put("routes", metabolite.getRoutes());
-    
-    try
-    {
-    	Metabolite metab = metabolite.getParent();
-    	if (metab != null)
-    		jo.put("parent", metab.getKey());
-
-    
-    	jo.put("smiles", metabolite.getKey());
-    }
-    catch(IOException ioEx)
-    {
-      //Not much good with out a smiles string
-      jo = null;
-    }
-
-    return jo;
-
-  }
-*/
-
 }
