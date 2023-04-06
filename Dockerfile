@@ -5,7 +5,7 @@ RUN wget https://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apa
 	tar -xvf apache-maven-3.6.3-bin.tar.gz && \
 	rm apache-maven-3.6.3-bin.tar.gz && \
 	mv apache-maven-3.6.3 /opt/ && \
-	mkdir /root/.chemaxon/licenses
+	mkdir -p /root/.chemaxon/licenses
 
 ENV M2_HOME='/opt/apache-maven-3.6.3' 
 
