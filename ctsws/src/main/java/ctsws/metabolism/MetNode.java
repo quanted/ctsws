@@ -10,7 +10,6 @@ import java.util.ArrayList;
 public class MetNode
 {
     public Metabolite metabolite;
-
     public String smiles;
     public ArrayList<MetNode> children;
 
@@ -19,6 +18,17 @@ public class MetNode
         smiles = smilesIn;
         metabolite = metaboliteIn;
         children = new ArrayList<MetNode>();
+    }
+
+    @Override
+    public String toString() {
+        return smiles + "_" + metabolite.getGeneration();
+    }
+    @Override
+    public boolean equals(Object obj) {
+        MetNode node = (MetNode)obj;
+        String key = smiles + "_" + metabolite.getGeneration();
+        return key.equals(node.toString());
     }
 
 
