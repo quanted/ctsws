@@ -311,7 +311,7 @@ public class Metabolizer extends HttpServlet {
 				String key = smiles + "___" + generation;
 
 				//Add back check for extinction metabolites
-				if (childNode.metabolite.getState() == Metabolite.State.EXTINCT))
+				if (childNode.metabolite.getState() == Metabolite.State.EXTINCT)
 					continue;
 
 				if (unique_metabolites){
