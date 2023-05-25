@@ -309,6 +309,11 @@ public class Metabolizer extends HttpServlet {
 				String smiles = childNode.metabolite.getKey();
 				int generation = childNode.metabolite.getGeneration();
 				String key = smiles + "___" + generation;
+
+				//Add back check for extinction metabolites
+				if (childNode.metabolite.getState() == Metabolite.State.EXTINCT))
+					continue;
+
 				if (unique_metabolites){
 					if (!node.children.contains(childNode))
 						node.children.add(childNode);
