@@ -7,13 +7,13 @@ FROM tomcat:10.1.12-jdk17
 # 	rm apache-maven-3.6.3-bin.tar.gz && \
 # 	mv apache-maven-3.6.3 /opt/ && \
 # 	mkdir -p /root/.chemaxon/licenses
-RUN wget https://dlcdn.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz && \
-	tar -xvf apache-maven-3.8.8-bin.tar.gz && \
-	rm apache-maven-3.8.8-bin.tar.gz && \
-	mv apache-maven-3.8.8 /opt/ && \
+RUN wget https://dlcdn.apache.org/maven/maven-3/3.9.4/binaries/apache-maven-3.9.4-bin.tar.gz && \
+	tar -xvf apache-maven-3.9.4-bin.tar.gz && \
+	rm apache-maven-3.9.4-bin.tar.gz && \
+	mv apache-maven-3.9.4 /opt/ && \
 	mkdir -p /root/.chemaxon/licenses
 
-ENV M2_HOME='/opt/apache-maven-3.8.8' 
+ENV M2_HOME='/opt/apache-maven-3.9.4' 
 
 ENV PATH="$M2_HOME/bin:$PATH"
 
