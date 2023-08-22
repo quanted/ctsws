@@ -28,3 +28,8 @@ WORKDIR /ctsws
 # Builds ctsws:
 RUN mvn package && \
 	cp target/ctsws-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/ctsws.war
+
+# Removes Maven for Prisma scans:
+RUN rm -rf \
+	/opt/apache-maven-3.9.4 \
+	/root/.m2
