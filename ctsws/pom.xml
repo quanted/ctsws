@@ -4,6 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <repositories>
+<!--         <repository>
+            <id>mvnrepository</id>
+            <url>https://mvnrepository.com</url>
+        </repository> -->
         <repository>
             <id>ChemAxon Public Repository</id>
             <url>https://hub.chemaxon.com</url>
@@ -100,11 +104,11 @@
             <version>2.15.0</version>
         </dependency>
         <!-- Tomcat Utils -->
-<!--         <dependency>
+        <dependency>
             <groupId>org.apache.tomcat</groupId>
-            <artifactId>tomcat-utils</artifactId>
-            <version>10.1.1</version>
-        </dependency> -->
+            <artifactId>tomcat-util</artifactId>
+            <version>10.1.12</version>
+        </dependency>
 
     </dependencies>
     <build>
