@@ -1,0 +1,14 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Jan 27 15:34:25 UTC 2023
+http\://0.0.0.0/.error=Could not transfer artifact com.chemaxon\:jchem\:pom\:16.1.4.0 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [EmeryyaPub (http\://nexus.emergya.es/nexus/content/repositories/public/, default, releases+snapshots)]
+@default-Google\ Repository-https\://mvnrepository.com/artifact/com.google.common/google-collect/.lastUpdated=1674590260373
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1674594439349
+https\://repo.fusesource.com/nexus/content/repositories/releases-3rd-party/.error=
+https\://hub.chemaxon.com/.lastUpdated=1674833665049
+https\://mvnrepository.com/artifact/com.google.common/google-collect/.error=Could not transfer artifact com.chemaxon\:jchem\:pom\:16.1.4.0 from/to Google Repository (https\://mvnrepository.com/artifact/com.google.common/google-collect)\: authorization failed for https\://mvnrepository.com/artifact/com.google.common/google-collect/com/chemaxon/jchem/16.1.4.0/jchem-16.1.4.0.pom, status\: 403 Forbidden
+https\://hub.chemaxon.com/.error=
+file\://D\:\\ctsws\\ctsws/src/lib/.error=
+https\://repo.maven.apache.org/maven2/.lastUpdated=1674833665508
+file\://D\:\\ctsws\\ctsws/src/lib/.lastUpdated=1674609279941
+https\://repo.fusesource.com/nexus/content/repositories/releases-3rd-party/.lastUpdated=1674590345228
+https\://repo.maven.apache.org/maven2/.error=

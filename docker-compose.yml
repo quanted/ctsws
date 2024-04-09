@@ -1,16 +1,14 @@
 version: '3'
-volumes:
-  collected_static:
-services:
 
-  # Apache Tomcat container
-  cts-tomcat:
+services:
+  # CTSWS Apache Tomcat container
+  ctsws:
     restart: unless-stopped
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: cts-tomcat-testing
-    container_name: cts-tomcat-testing
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    image: ${CTSWS_IMAGE}
+    container_name: ctsws
     # expose:
     #   - "8080"
     ports:
@@ -18,9 +16,7 @@ services:
     environment:
       - JAVA_OPTS=-Xmx1g
       - LOG4J_FORMAT_MSG_NO_LOOKUPS=true
+      - CTSWS_SERVER_USERNAME=${CTSWS_SERVER_USERNAME}
+      - CTSWS_SERVER_PASSWORD=${CTSWS_SERVER_PASSWORD}
     volumes:
-      - .:/src
-      - ./settings.xml:/root/.m2/settings.xml
-    #   - ./secrets/tomcat/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
-    #   - ./secrets/tomcat/webapps:/usr/local/tomcat/webapps
-    #   - ./secrets/tomcat/chemaxon/licenses:/home/tomcat/.chemaxon/licenses
+      - ./chemaxon/licenses/license.cxl:/root/.chemaxon/licenses/license.cxl

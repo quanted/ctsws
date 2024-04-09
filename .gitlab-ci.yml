@@ -1,0 +1,56 @@
+stages:
+  - Image Build
+  - Image Scan
+
+include:
+  - remote: 'https://gitlab.com/prismacloud-public/shift-left/extension/-/raw/master/.pcs.gitlab-ci.yml'
+  - local: 'version.yml'
+
+variables:
+  ctsws_tag: docker-279e0ff8298c13e5b9db7861a9a2db2b25411e3e  # GHCR tag
+  
+CopyDevImages:
+  stage: Image Build
+  tags:
+    - qed-stg-runner
+  when: manual
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [ "" ]
+  script:
+    - mkdir -p /kaniko/.docker
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - mkdir -p /workspace
+    # CTSWS Tomcat Image:
+    - echo "FROM ghcr.io/quanted/ctsws:$ctsws_tag" > /workspace/Dockerfile
+    - /kaniko/executor --context=/workspace --destination=$CI_REGISTRY_IMAGE/ctsws:$CI_COMMIT_REF_NAME
+
+SetProdImages:
+  stage: Image Build
+  tags:
+    - qed-stg-runner
+  when: manual
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [ "" ]
+  script:
+    # CTSWS Tomcat Image:
+    - echo "FROM ghcr.io/quanted/ctsws:$ctsws_tag" > /workspace/Dockerfile
+    - /kaniko/executor --context=/workspace --destination=$CI_REGISTRY_IMAGE/cts-biotransformer:main-$PROD_VERSION
+
+CTSWSImageScan:
+  stage: Image Scan
+  extends:
+    - .pcs_compute_scan
+  tags:
+    - twistcli
+  when: manual
+  allow_failure: true
+  variables:
+    prisma_cloud_compute_url: "https://prismacloud.gitlab-prod.aws.epa.gov"
+    GIT_STRATEGY: clone
+    prisma_cloud_scan_image: "registry.epa.gov/qed/ctsws:$CI_COMMIT_REF_NAME" 
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD registry.epa.gov
+    - docker pull $prisma_cloud_scan_image
+    - ./image_scan.sh
