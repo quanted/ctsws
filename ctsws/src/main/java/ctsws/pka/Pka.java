@@ -205,18 +205,14 @@ public class Pka extends HttpServlet {
 				double apka = plugin.getpKa(atomIndex, pKaPlugin.ACIDIC);
 				double bpka = plugin.getpKa(atomIndex, pKaPlugin.BASIC);
 
-				System.out.println("atomIndex: " + atomIndex);
-				System.out.println("pka: " + apka);
-				System.out.println("pkb: " + bpka);
-
 				if (!Double.isNaN(apka)) {
 					pkas.add(apka);
-					jsonPkaDict.put(Double.toString(apka), atomIndex);
+					jsonPkaDict.put(Integer.toString(atomIndex), Double.toString(apka));
 				}
 
 				if (!Double.isNaN(bpka)) {
 					pkbs.add(bpka);
-					jsonPkaDict.put(Double.toString(bpka), atomIndex);
+					jsonPkaDict.put(Integer.toString(atomIndex), Double.toString(bpka));
 				}
 
 			}
