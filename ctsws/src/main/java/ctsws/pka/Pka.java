@@ -170,8 +170,8 @@ public class Pka extends HttpServlet {
 
 			pKaPlugin plugin = new pKaPlugin();
 		    plugin.setMaxIons(6);
-		    plugin.setBasicpKaLowerLimit(-5.0);
-		    plugin.setAcidicpKaUpperLimit(25.0);
+		    plugin.setBasicpKaLowerLimit(0.0);
+		    plugin.setAcidicpKaUpperLimit(14.0);
 		    plugin.setpHLower(3.0);
 		    plugin.setpHUpper(6.0);
 		    plugin.setpHStep(1.0);
