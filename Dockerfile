@@ -1,5 +1,4 @@
-# FROM tomcat:10-jdk17-openjdk-buster
-FROM tomcat:10.1.25-jdk17
+FROM tomcat:10.1.44-jdk17
 
 # Installs Maven:
 # RUN wget https://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz && \
