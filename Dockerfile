@@ -6,13 +6,13 @@ FROM tomcat:10.1.44-jdk17
 # 	rm apache-maven-3.6.3-bin.tar.gz && \
 # 	mv apache-maven-3.6.3 /opt/ && \
 # 	mkdir -p /root/.chemaxon/licenses
-RUN wget https://dlcdn.apache.org/maven/maven-3/3.9.4/binaries/apache-maven-3.9.4-bin.tar.gz && \
-	tar -xvf apache-maven-3.9.4-bin.tar.gz && \
-	rm apache-maven-3.9.4-bin.tar.gz && \
-	mv apache-maven-3.9.4 /opt/ && \
+RUN wget https://dlcdn.apache.org/maven/maven-3/3.9.11/binaries/apache-maven-3.9.11-bin.tar.gz && \
+	tar -xvf apache-maven-3.9.11-bin.tar.gz && \
+	rm apache-maven-3.9.11-bin.tar.gz && \
+	mv apache-maven-3.9.11 /opt/ && \
 	mkdir -p /root/.chemaxon/licenses
 
-ENV M2_HOME='/opt/apache-maven-3.9.4' 
+ENV M2_HOME='/opt/apache-maven-3.9.11' 
 
 ENV PATH="$M2_HOME/bin:$PATH"
 
@@ -30,5 +30,5 @@ RUN mvn package && \
 
 # Removes Maven for Prisma scans:
 RUN rm -rf \
-	/opt/apache-maven-3.9.4 \
+	/opt/apache-maven-3.9.11 \
 	/root/.m2
